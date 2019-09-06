@@ -1,0 +1,314 @@
+.vc-table-component{
+    position: relative;
+    width: 100%;
+}
+
+table.vc-table{
+    display: table;
+    width: 100%;
+
+    &.vc-table-simple{
+        >thead.vc-table-head{
+            position: relative;
+            width: 100%;
+            >tr.vc-table-row{
+                display: table-row;
+                >th.vc-table-cell{
+                    padding: 15px 15px;
+                    color: $black;
+                    font-weight: normal;
+                } 
+            }
+        }
+        >tbody.vc-table-body{
+            >tr:last-child{
+                &.vc-table-row-space{
+                }
+            }
+
+            >tr.vc-table-row{
+                background-color: #ffffff;
+                @include border-radius(0px);
+                @include box-shadow(none !important);
+                @include transition(background-color 200ms ease-in-out);
+                &:hover{
+                    background-color: $gray-50;
+                }
+
+                >td.vc-table-cell{
+                    padding: 20px 15px;
+                    border: none;
+                    color: $black;
+                    border-bottom: solid 1px $light;
+
+                    &:first-child{
+                        @include border-top-left-radius(0px);
+                        @include border-bottom-left-radius(0px);
+                    }
+
+                    &:last-child{
+                        @include border-top-right-radius(0px);
+                        @include border-bottom-right-radius(0px);
+                    }
+                } 
+            }
+            >tr.vc-table-row-space{
+                height: 20px;
+            }
+        }
+    }
+
+    >thead.vc-table-head{
+        position: relative;
+        width: 100%;
+        >tr.vc-table-row{
+            display: table-row;
+            >th.vc-table-cell{
+                padding: 35px 15px;
+                color: $black;
+                font-weight: normal;text-align: left;
+            } 
+        }
+    }
+
+
+    >tbody.vc-table-body{
+        position: relative;
+        width: 100%;
+        >tr:last-child{
+            &.vc-table-row-space{
+                display: none;
+            }
+        }
+
+        >tr.vc-table-row{
+            display: table-row;
+            background-color: #ffffff;
+            @include border-radius(0.4rem);
+            @include box-shadow(0 0 20px -10px rgba(0,0,0,0.6));
+            @include transition(background-color 200ms ease-in-out);
+            &:hover{
+                background-color: $gray-50;
+            }
+
+            >td.vc-table-cell{
+                padding: 25px 15px;
+                border: none;
+                color: $black;
+
+                &:first-child{
+                    @include border-top-left-radius(0.4rem);
+                    @include border-bottom-left-radius(0.4rem);
+                }
+
+                &:last-child{
+                    @include border-top-right-radius(0.4rem);
+                    @include border-bottom-right-radius(0.4rem);
+                }
+            } 
+        }
+        >tr.vc-table-row-space{
+            height: 20px;
+        }
+    }
+}
+
+.vc-table-controls{
+    position: relative;
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .controls-list{
+        position: relative;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        list-style: none;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        &.right{
+            text-align: right;
+            justify-content: flex-end;
+        }
+    
+        li.control-item{
+            display: inline-block;
+            margin: 0px 1rem;
+
+            &:first-child{
+                margin-left: 0px;
+            }
+
+            &:last-child{
+                margin-right: 0px;
+            }
+
+            .vc-action-toggler{
+                padding: 0.1rem 1.5rem;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                vertical-align: middle;
+
+                i{
+                    font-size: 0.7rem;
+                }
+
+                .toggler-label{
+                    display: inline-block;
+                }
+            }
+
+        //  .delete-button{
+        //          border-color: rgba(0, 0, 0, 0);
+        //          background: #8CA0B3;color:#fff;
+        //           text-align: center;
+                 
+        //         position: relative;
+        //           display: flex;
+        //           width: 100%;
+        //           flex-direction: row;
+                
+        //           outline: none;
+               
+        //           border-width: 1px;
+        //          border-style: solid;
+        //          font-size: 0.85rem;
+        //           border-radius: 0.3rem;
+        //          font-weight: 600;
+        //          height: 50px;
+        //     }
+
+            .pagination{
+                .pagination-inner{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 50px;
+                    .range{
+                        display: inline-block;
+                        margin: 0px 20px;
+                        color: $black;
+                    }
+                    >button.nav-button{
+                        background:none;
+                        border:none;
+                        color: $black;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        &:hover, &:focus{
+                            opacity: 0.8;
+                        }
+                        &:disabled{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+
+            .search-control{
+                position: relative;
+                float: left;
+                .search-field{
+                    position: relative;
+                    float: left;
+                    width: 200px;
+                    outline: none;
+                    border: none;
+                    background: rgba(140, 160, 179, 0.2);
+                    height: 40px;
+                    padding: 5px 35px 5px 10px;
+                    color: $black;
+                    z-index: 1;
+                    font-size: 0.85rem;
+                    @include border-radius(20px);
+                    &:focus{
+                        background-color: rgba(140, 160, 179, 0.22);
+                    }
+                }
+
+                .search-button{
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    padding: 0rem 0rem;
+                    margin: 0rem 0rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background: none;
+                    z-index: 2;
+                    >i{
+                        font-size: 1.2rem;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:hover, &:focus{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.vc-table-controls.row{
+    margin-left: 0;
+}
+
+
+
+@media(max-width : 768px){
+
+    th.vc-table-cell{
+        font-weight: bold !important;
+    }
+
+    .right-container{
+        margin-left: 0;
+        margin-right: 0;
+
+        .col-12{
+            padding: 0;
+        }
+    }
+
+    .search-container{
+        width: 100%;
+        margin: 0.75rem auto 0.75rem auto !important;
+
+        *{
+            width: 100%;
+        }
+
+        .search-field{
+            width: 100% !important;
+        }
+
+        .search-button {
+            width: auto;
+        }
+    }
+
+    .sort-filter-container{
+        width: 100%;        
+        margin-bottom: 0.75rem !important;
+
+        *{
+            width: 100%;
+        }
+
+        .vc-button-group-item{
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.typography{
+    color: $gray;
+    font-size: 18px;
+    line-height: 22px;
+
+    &.typography-xsmall{
+        font-size: 0.7rem;
+    }
+
+    &.typography-small{
+        font-size: 0.8rem;
+    }
+
+    &.typography-large{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    &.typography-active{
+        color: $primary;
+    }
+
+    &.typography-success{
+        color: $green;
+    }
+
+    &.typography-warning{
+        color: $orange;
+    }
+
+    &.typography-danger{
+        color: $red;
+    }
+
+    &.typography-white{
+        color: $white;
+    }
+
+    &.typography-black{
+        color: $black;
+    }
+
+    &.typography-center{
+        text-align: center;
+        
+    }
+
+    &.typography-right{
+        text-align: right;
+    }
+
+    &.typography-justify{
+        text-align: justify;
+    }
+}

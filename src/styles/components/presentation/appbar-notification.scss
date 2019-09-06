@@ -1,0 +1,83 @@
+.vc-appbar-notification{
+    display: inline-block;
+
+    >.trigger-button{
+        display: inline-block;
+        padding: 0.8rem 0.8rem;
+        outline: none;
+        margin-right: 1.5rem;
+    }
+
+    >.notifications-list-container{
+        position: absolute;
+        right: 20px;
+        top: 100%;
+        margin: 0px 0px;
+        
+        padding: 0px 0px;
+        width: 400px;
+        background-color: $white;
+        border: solid 1px $light;
+        @include border-radius(0.2rem);
+        @include box-shadow(0px 5px 40px -10px $light);
+        overflow: hidden;
+        list-style: none;
+        
+        >.notifications-list{
+            position: relative;
+            float: left;
+            width: 100%;
+            max-height: 400px;
+            margin: 0px 0px;
+            padding: 0px 0px;
+            overflow: auto;
+            list-style: none;
+    
+            >.notification-item{
+                position: relative;
+                float: left;
+                width: 100%;
+                border: solid 1px $light;
+                border-left-width: 5px;
+                border-top-width: 0px;
+    
+                &:last-child{
+                    border-bottom-width: 0px;
+                }
+    
+                &.invoice-unseen{
+                    border-left-color: $orange;
+                }
+    
+                &.payments-unseen{
+                    border-left-color: $primary;
+                }
+    
+                &.campaign-unseen{
+                    border-left-color: $green;
+                }
+    
+                &.unseen{
+                    border-left-color: $blue;
+                }
+
+                >button{
+                    padding: 1.2rem 1rem;
+                    width: 100%;
+                    border: none;
+                    background: none;
+                    text-align: left;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:768px){
+    .notifications-list-container{
+        left:0;
+        width:100% !important;
+    }
+}

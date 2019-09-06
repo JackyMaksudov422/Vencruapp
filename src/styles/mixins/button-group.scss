@@ -1,0 +1,46 @@
+@mixin button-group($borderColor, $backgroundColor, $backgroundHoverColor, $textColor, $textHoverColor){
+    >.vc-button-group-item{
+        >.vc-button, >.vc-dd >.dd-toggle-button{
+            background-color: $backgroundColor !important;
+            color: $textColor !important;
+            border-color: $borderColor;
+            border-width: 1px;
+            border-style: solid;
+            border-right: none;
+
+            &:hover, &:focus{
+                background-color: $backgroundHoverColor !important;
+                color: $textHoverColor !important;
+            }
+        
+            &:disabled, &.disabled{
+                background-color: lighten($backgroundColor, 10%) !important;
+                @if(lightness($backgroundColor) > 75){
+                    background-color: desaturate($backgroundColor, 20%) !important;
+                    color: lighten($textColor, 10%) !important;
+                } @else {
+                    color: rgba(darken($textColor, 4%), 0.9) !important;
+                    *{
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+
+        &:last-child{
+            >.vc-button, >.vc-dd >.dd-toggle-button{
+                border-right-color: $borderColor;
+                border-right-width: 1px;
+                border-right-style: solid;
+            }
+        }
+    }
+}
+
+@mixin button-size($size){
+    @if($size == large){
+        height: 64px;
+    } @else if($size == small) {
+        height: 35px;
+    }
+}

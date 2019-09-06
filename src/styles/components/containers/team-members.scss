@@ -1,0 +1,218 @@
+.vc-team-members-form{
+    position: relative;
+    float: left;
+    width: 100%;
+
+    >.vc-team-members-form-header{
+        position: relative;
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+
+        >.title{
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: center;
+            display: block;
+            color: $primary;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: normal;
+        }
+        >.subtitle{
+            poosition: relative;
+            float: left;
+            width: 100%;
+            color: $gray;
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 14px;
+            font-style: italic;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+    }
+
+    >.vc-team-members-form-body {
+        position: relative;
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+
+        .form-fields{
+            position: relative;
+            float: left;
+            width: 100%;
+            background-color: $white;
+
+            >.form-fields-inner{
+                position: relative;
+                width: 100%;
+                float: left;
+                z-index: 1;
+
+                label.input-label{
+                    display: block;
+                    color: #8CA0B3;
+                    font-size: 12px;
+                    line-height: 14px;
+                    text-align: left;
+                    margin-bottom: 5px;
+                }
+
+                .vc-input, .vc-select .select-toggle-button{
+                    color: #31393C;
+                    border-color: rgba(140, 160, 179, 0.2);
+
+                    &.focus{
+                        border-color: rgba(140, 160, 179, 0.2) !important;
+                        input{
+                            background-color: rgba(140, 160, 179, 0.2);
+                        }
+                    }
+                }
+
+                .receipt-selector{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                }
+
+                    button.submit-button{
+                        padding-left: 30px;
+                        padding-right: 30px;
+
+                    }
+
+                    button.cancel-button{
+
+                    }
+            }
+        }
+
+    }
+
+    >.vc-team-members-form-footer{
+        position: relative;
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: center;
+        align-items: center;
+        justify-content: center;
+        >.powered-by{
+            color: #000000;
+            font-size: 14px;
+            line-height: 20px;
+            margin-right: 7.5px;
+        }
+        >img.brand{
+            width: 72px;
+        }
+    }
+}
+
+.vc-page-dialog.team-members-form-page-dialog{
+    .vc-page-dialog-inner{
+        .vc-page-dialog-content{
+            max-width: 822px;
+            .vc-page-dialog-body {
+                padding: 45px 55px 24px 55px !important;
+                .team-members-fetch-error{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                    background-color: #ffffff;
+
+                    .error-title{
+                        color: $primary;
+                        font-weight: normal;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    }
+
+                    .error-description{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        margin-top: 0px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    .actions-container{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.vc-team-members-manager{
+    button.add-button{
+        padding: 0px 0px;
+        font-size: 16px;
+        lin-height: 19px;
+        outline: none;
+        >i{
+            color: $green;
+            font-size: 18px;
+        }
+        >span{
+            color: $gray;
+        }
+    }
+
+}
+
+.team-member-action-buttons{
+    position: relative;
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.vc-team-member-basic-info{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    >img{
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin-right: 20px;
+        @include border-radius(18px);
+    }
+
+    >.info{
+        flex: 1;
+        display: inline-block;
+        .name{
+            color: $black;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: normal;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .email{
+            color: $gray;
+            font-size: 11px;
+            line-height: 14px;
+            font-weight: bold;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+    }
+}

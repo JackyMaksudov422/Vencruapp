@@ -1,0 +1,67 @@
+.get-started-card {
+    @media(max-width: 768px) {
+        .start-onboarding-btn {
+            padding: 10px !important;
+        }
+        .dialog-icon{
+            width: 84px;
+            height: 84px;
+            margin-bottom: 0;
+            margin-top:0;
+        }
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .steps-container {
+        position: relative;
+        float: none;
+        width: 100%;
+        max-width: 960px;
+        clear: both;
+        margin: 50px auto 0;
+        padding: 0px 20px;
+
+        .step-item {
+            position: relative;
+            float: left;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+
+            .step-image {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 19px;
+            }
+
+            .step-title {
+                font-size: 1.1rem;
+                font-weight: normal;
+                color: $black;
+            }
+
+            .step-description {
+                font-size: 0.9rem;
+                font-weight: normal;
+                color: $gray;
+                margin-bottom: 40px;
+                margin-top: 0px;
+            }
+
+            .step-link {
+                padding: 0.8rem 1.9rem;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

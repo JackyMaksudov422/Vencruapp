@@ -1,0 +1,49 @@
+.vc-dashboard-section-heading .row {
+	width: 100% !important;
+}
+
+.vc-dashboard-section {
+	position: relative;
+	float: left;
+	width: 100%;
+	// margin-bottom: 30px;
+	.vc-dashboard-section-heading {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.vc-dashboard-section-title {
+			color: $black;
+			font-weight: normal;
+			flex: 1;
+			font-size: 1.4rem;
+			margin: 1.5rem 0px 1.5rem;
+			white-space: nowrap;
+		}
+
+		.vc-dashboard-section-filter {
+			position: relative;
+			float: right;
+			text-align: right;
+		}
+	}
+
+	.vc-dashboard-section-body {
+		position: relative;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.vc-dashboard-section-title {
+		width: 50% !important;
+	}
+}
+
+@media (max-width: 320px) {
+	#row2 a.vc-button.vc-button-small {
+		padding: 10px;
+	}
+}

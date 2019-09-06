@@ -1,0 +1,98 @@
+@mixin dd-container($backgroundColor, $textColor){
+    &.active{
+        >button.dd-toggle-button{
+            background-color: $backgroundColor;
+            color: $textColor;
+        }
+        .dd-options-container{
+            border-color: rgba(#8CA0B3, 0.2) !important;
+        }
+    }
+    &.disabled{
+        >button.dd-toggle-button{
+            @if(lightness($backgroundColor) > 75){
+                background-color: darken($backgroundColor, 0.9);
+            } @else {
+                background-color: lighten($backgroundColor, 0.9);
+            }
+        }
+        .dd-options-container{
+            display: none;
+        }
+    }
+    >button.dd-toggle-button{
+        background-color: $backgroundColor;
+        color: $textColor;
+        border-color: $backgroundColor;
+        &:disabled{
+            opacity: 0.8;
+        }
+    }
+    
+    .dd-options-container{
+        border-color: rgba(#8CA0B3, 0.2);
+    }
+}
+
+@mixin link-dd-container($tintColor){
+    &.active{
+        .dd-options-container{
+            border-color: rgba(#8CA0B3, 0.2) !important;
+        }
+    }
+    &.disabled{
+        >button.dd-toggle-button{
+            @if(lightness($tintColor) > 75){
+                color: darken($tintColor, 0.9);
+            } @else {
+                color: lighten($tintColor, 0.9);
+            }
+        }
+        .dd-options-container{
+            display: none;
+        }
+    }
+    >button.dd-toggle-button{
+        background: none;
+        color: $tintColor;
+        border: none;
+        span.arrow{
+            display: none;
+        }
+        span.placeholder{
+            text-align: center;
+        }
+        &:disabled{
+            opacity: 0.8;
+        }
+    }
+    
+    .dd-options-container{
+        border-color: $tintColor;
+    }
+}
+
+@mixin dd-size($size){
+    @if($size == large){
+        button.dd-toggle-button{
+            font-size: 1.7rem;
+            span.arrow{
+                i{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    } @else if($size == small) {
+        button.dd-toggle-button{
+            @include border-radius(0.23rem);
+            font-size: 0.7rem;
+            padding: 0.75rem 1rem;
+            span.arrow{
+                padding: 0px 0rem 0rem 0.5rem;
+                i{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

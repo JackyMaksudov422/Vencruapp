@@ -1,0 +1,185 @@
+.vc-items-home{
+    .new-item-card{
+        height: 222.17px;
+        .add-icon{
+            color: $green;
+            font-size: 1.3rem;
+            margin-top: -8px;
+        }
+        .add-label{
+            margin-left: 5px;
+            color: $gray;
+            font-size: 1rem;
+            line-height: 0rem;
+            display: inline-block;
+            margin-top: -5px;
+        }
+    }
+
+    .item-unit-price{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-top;
+
+        .amount{
+            flex: 1;
+            padding-top: 16px;
+        }
+    }
+}
+
+.vc-items-deleted-list{
+    .item-unit-price{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-top;
+
+        .amount{
+            flex: 1;
+            padding-top: 16px;
+        }
+    }
+}
+
+.vc-item-form{
+    h1.title{
+        color: $primary;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .form-fields{
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 2rem 2rem;
+        background-color: $white;
+        margin-bottom: 40px;
+
+        >.form-fields-inner{
+            position: relative;
+            width: 100%;
+            float: left;
+            z-index: 1;
+
+            label.input-label{
+                color: #8CA0B3;
+                font-size: 12px;
+                line-height: 14px;
+                text-align: Left
+            }
+
+            .vc-input{
+                color: #31393C;
+                border-color: rgba(140, 160, 179, 0.2);
+
+                &.focus{
+                    border-color: rgba(140, 160, 179, 0.2) !important;
+                    input{
+                        background-color: rgba(140, 160, 179, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+    button.submit-button{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    button.cancel-button{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+.vc-page-dialog.item-form-page-dialog{
+    .vc-page-dialog-inner{
+        .vc-page-dialog-content{
+            max-width: 800px;
+            .vc-page-dialog-body {
+                padding: 30px 1.5rem !important;
+                .item-fetch-error{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                    background-color: #ffffff;
+
+                    .error-title{
+                        color: $primary;
+                        font-weight: normal;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    }
+
+                    .error-description{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        margin-top: 0px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    .actions-container{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item-name{
+    display: block;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 14px;    
+
+    color: #31393C;
+
+    margin-bottom: 4px;
+
+}
+
+.item-description{
+    display: block;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    
+    color: #31393C;
+    margin-bottom: 4px;
+}
+
+.item-number{
+    display: block;
+    font-family: Lato;
+    font-style: normal;
+    line-height: normal;
+    font-size: 12px;
+
+    color: #8CA0B3;
+}
+
+
+
+
+@media(max-width:768px){
+    .vc-item-form .form-fields{padding: 2rem 2rem 0 2rem;margin-bottom: 0;}
+}
+

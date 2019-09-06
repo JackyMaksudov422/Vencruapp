@@ -1,0 +1,22 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/defaults';
+@import './utils/misc';
+@import './utils/generates';
+@import './utils/fonts';
+
+/**
+ * twitter bootstrap dependencies
+ */
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/grid';
+
+/**
+ * react phone input dependencies
+ */
+@import './plugins/react-phone-input';
+@import './plugins/flatpickr.min.scss';

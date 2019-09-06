@@ -1,0 +1,40 @@
+.vc-appbar-search{
+    position: relative;
+    float: left;
+    width: 100%;
+    &.focused{
+        .field-container{
+            border-color: $light;
+        }
+    }
+    .field-container{
+        width: 100%;
+        height: 40px;
+        background-color: #f5f5f5;
+        border: solid 1px #f5f5f5;
+        @include border-radius(20px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+
+        input.field{
+            flex: 1;
+            height: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0px 15px;
+            font-size: 1rem;
+        }
+
+        .field-adornment{
+            display: flex;
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+        }
+    }
+}

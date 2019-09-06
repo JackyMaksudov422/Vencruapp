@@ -1,0 +1,50 @@
+$white:    #ffffff !default;
+$gray-50:  #FAFAFA !default;
+$gray-100: #F5F5F5 !default;
+$gray-200: #EEEEEE !default;
+$gray-300: #E0E0E0 !default;
+$gray-400: #BDBDBD !default;
+$gray-500: #9E9E9E !default;
+$gray-600: #757575 !default;
+$gray-700: #616161 !default;
+$gray-800: #424242 !default;
+$gray-900: #212121 !default;
+
+$primary  : #2D74DA !default;
+$secondary: #264678 !default;
+$blue     : #79A6F6 !default;
+$someBlue : #35B2F9 !default;
+$green    : #17BF5F !default;
+$red      : #F56A6A !default;
+$yellow   : #F2C94C !default;
+$orange   : #FE8500 !default;
+$purple   : #8364C5 !default;
+$gray     : #8CA0B3 !default;
+$black    : #31393C !default;
+$light    : rgba(#8CA0B3, 0.2) !default;
+$lighter  : rgba(140, 160, 179, 0.2) !default;
+$user-page-color: #EFF4FA !default;
+
+$link-color: $primary;
+$link-color-hover: darken($primary, 10%);
+
+$font-color: $gray;
+$dark-font-color: $black;
+
+$menubar-width: 230px;
+$menubar-background-color: #ffffff;
+
+$appbar-height: 72px;
+$ui-colors: (
+    "blue":       $blue,
+    "red":     	  $red,
+    "purple":     $purple,
+    "orange":     $orange,
+    "primary":    $primary,
+    "green":      $green,
+    "secondary":  $secondary,
+    "black":      $black,
+    "light":      $light,
+    "gray":       $gray,
+    "gray-dark":  $gray-800
+);

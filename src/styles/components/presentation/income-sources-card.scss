@@ -1,0 +1,128 @@
+.vc-income-sources-card{
+    position: relative;
+    float: left;
+    width: 100%;
+
+    >.title{
+        @extend %spanned;
+        color: $black;
+        font-weight: normal;
+    }
+
+    .placeholder-heading{
+        @extend %spanned;
+        .placeholder-title{
+            position: relative;
+            float: left;
+            margin-left: 60px;
+            color: $primary;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+
+        .placeholder-filters{
+            position: relative;
+            float: right;
+            width: 237px;
+            height: 44px;
+            background-color: $light;
+            @include border-radius(0.3rem);
+        }
+    }
+
+    .placeholder-graph{
+        @extend %spanned;
+        margin: 30px 0px;
+        background-color: $white;
+
+        .graph-image{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+
+        ul.legends-list{
+            position: relative;
+            float: left;
+            width: 100%;
+            list-style: none;
+            padding: 0px 0px;
+            margin: 0px 0px;
+
+            >li.legend-item{
+                position: relative;
+                float: left;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 30px;
+
+                &.secondary{
+                    .legend-dash{
+                        background-color: $secondary;
+                    }
+                    .legend-circle{
+                        border-color: $secondary;
+                    }
+                }
+
+                &.green{
+                    .legend-dash{
+                        background-color: $green;
+                    }
+                    .legend-circle{
+                        border-color: $green;
+                    }
+                }
+
+                &.blue{
+                    .legend-dash{
+                        background-color: $blue;
+                    }
+                    .legend-circle{
+                        border-color: $blue;
+                    }
+                }
+
+                .legend-dash{
+                    display: inline-block;
+                    width: 30px;
+                    height: 4px;
+                    @include border-top-left-radius(0.5rem);
+                    @include border-bottom-left-radius(0.5rem);
+                    background-color: $light;
+                }
+
+                .legend-circle{
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border: solid 4px $light;
+                    @include border-radius(0.5rem);
+                }
+
+                .legend-label{
+                    display: inline-block;
+                    background-color: $light;
+                    height: 15px;
+                    width: 128px;
+                    margin-left: 30px;
+                    @include border-radius(0.5rem);
+
+                    &.long{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+
+    .placeholder-bottom-line{
+        @extend %spanned;
+        height: 11px;
+        background-color: $light;
+        @include border-radius(0.2rem);
+    }
+}

@@ -1,0 +1,38 @@
+/**
+ * Font
+ */
+ @font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../assets/fonts/AvenirNextLTPro-Bold.eot');
+    src: local('Avenir Next LT Pro Bold'), local('AvenirNextLTPro-Bold'),
+        url('../assets/fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('../assets/fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+        url('../assets/fonts/AvenirNextLTPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../assets/fonts/AvenirNextLTPro-It.eot');
+    src: local('Avenir Next LT Pro Italic'), local('AvenirNextLTPro-It'),
+        url('../assets/fonts/AvenirNextLTPro-It.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/AvenirNextLTPro-It.woff2') format('woff2'),
+        url('../assets/fonts/AvenirNextLTPro-It.woff') format('woff'),
+        url('../assets/fonts/AvenirNextLTPro-It.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../assets/fonts/AvenirNextLTPro-Regular.eot');
+    src: local('Avenir Next LT Pro Regular'), local('AvenirNextLTPro-Regular'),
+        url('../assets/fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('../assets/fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+        url('../assets/fonts/AvenirNextLTPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

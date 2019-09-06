@@ -1,0 +1,133 @@
+.onboarding-business-card{
+    position: relative;
+    float: none;
+    width: 100%;
+    max-width: 720px;
+    clear: both;
+    margin: 0 auto;
+
+    >.content{
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+
+    .form-container{
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 30px 0px;
+        display: flex;
+        flex-direction: row;
+        @include box-shadow(0px 4px 60px -10px rgba(0,0,0,0.3));
+        @include border-radius(0.3rem);
+
+        >.fields-container{
+            flex: 1;
+        }
+
+        >.design-space{
+            flex: 0.4;
+        }
+    }
+}
+
+.onboarding-about-industry{
+    position: relative;
+    float: none;
+    width: 100%;
+    max-width: 400px;
+    clear: both;
+    margin: 0 auto;
+
+    >.content{
+        position: relative;
+        float: left;
+        width: 100%;
+
+        .industries-container{
+            position: relative;
+            float: none;
+            width: 100%;
+            max-width: 300px;
+            clear: both;
+            margin: 0 auto;
+            button.industry-select-button{
+                padding: 8px 8px;
+                background: none;
+                border: solid 1px rgba(0,0,0,0);
+                display: inline-block;
+                outline: none;
+                width: 100%;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+                
+                &:active{
+                    opacity: 0.8;
+                }
+
+                &.selected{
+                    border-color: $primary;
+                }
+    
+                img.industry-icon{
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 80px;
+                }
+            }
+        }
+
+    }
+}
+
+.onboarding-about-business{
+    position: relative;
+    float: none;
+    width: 100%;
+    max-width: 720px;
+    clear: both;
+    margin: 0 auto;
+
+    >.content{
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px){
+    // .vc-select, .vc-checkbox{
+    //     padding-left: 10px;
+    // }
+    .mb20 .vc-input {
+        margin-bottom: -10px !important;
+    }
+    .industries-container{
+        padding-bottom:0px !important;
+        margin-bottom:0px !important;
+    }
+    .right-pane{
+        display: none !important;
+    }
+    .vc-select.vc-select-link-focused select + button.select-toggle-button{
+        background: transparent;
+    }
+    .employee-count{
+        margin-top:15px;
+    }
+    // .vc-button{
+    //     padding:10px !important;
+    // }
+    .row .vc-button-small{
+        color:black;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        padding:15px;
+        border-radius: 4.02px;
+        font-weight: 800;
+    }
+}

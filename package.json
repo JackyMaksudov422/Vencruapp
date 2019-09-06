@@ -1,0 +1,59 @@
+{
+  "name": "vencru-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.4.0",
+    "@material-ui/icons": "^3.0.1",
+    "@material-ui/lab": "^3.0.0-alpha.23",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "chart.js": "^2.7.3",
+    "crypto-js": "^3.1.9-1",
+    "libphonenumber-js": "^1.6.4",
+    "moment": "^2.23.0",
+    "node-sass": "^4.10.0",
+    "query-string": "^6.2.0",
+    "react": "^16.6.0",
+    "react-avatar-editor": "^11.0.4",
+    "react-chartjs-2": "^2.7.4",
+    "react-dom": "^16.6.0",
+    "react-flatpickr": "^3.6.4",
+    "react-google-login": "^3.2.1",
+    "react-input-mask": "^2.0.4",
+    "react-loadable": "^5.5.0",
+    "react-number-format": "^4.0.3",
+    "react-phone-number-input": "^2.2.16",
+    "react-redux": "^5.1.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "react-select": "^2.4.1",
+    "react-text-mask": "^5.4.3",
+    "recharts": "^1.5.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "toastr": "^2.1.4"
+  },
+  "scripts": {
+    "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
+    "start": "npm run tailwind:css && react-scripts start",
+    "build": "npm run tailwind:css && react-scripts build",
+    "make:build": "npm run tailwind:css && sh -ac '. .env.${REACT_APP_ENV}; react-scripts build'",
+    "build:staging": "REACT_APP_ENV=staging npm run make:build",
+    "build:production": "REACT_APP_ENV=production npm run make:build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "tailwindcss": "^0.7.3"
+  }
+}

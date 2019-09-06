@@ -1,0 +1,104 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/defaults';
+@import './utils/misc';
+@import './utils/generates';
+@import './utils/fonts';
+
+/**
+ * twitter bootstrap dependencies
+ */
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import "../../node_modules/bootstrap/scss/mixins";
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/grid';
+
+/**
+ * react phone input dependencies
+ */
+@import './plugins/react-phone-input';
+@import './plugins/flatpickr.min.scss';
+
+@import '../css/tailwind.css';
+
+/**
+ * Component styles
+ */
+@import './components/presentation/typography';
+@import './components/presentation/button';
+@import './components/presentation/button-group';
+@import './components/presentation/dropdown';
+@import './components/presentation/input';
+@import './components/presentation/chip';
+@import './components/presentation/checkbox';
+@import './components/presentation/client-note';
+@import './components/presentation/select';
+@import './components/presentation/page-dialog';
+@import './components/presentation/overlay-loader';
+@import './components/presentation/menubar';
+@import './components/presentation/appbar';
+@import './components/presentation/appbar-search';
+@import './components/presentation/appbar-notification';
+@import './components/presentation/plain-card';
+@import './components/presentation/get-started-card';
+@import './components/presentation/pending-revenue-card';
+@import './components/presentation/total-profit-card';
+@import './components/presentation/income-sources-card';
+@import './components/presentation/expenses-card';
+@import './components/presentation/dashboard-cards';
+@import './components/presentation/dashboard-section';
+@import './components/presentation/table';
+@import './components/presentation/client-basic-info';
+@import './components/presentation/loaders';
+@import './components/presentation/errors-page';
+@import './components/presentation/alert-dialog';
+@import './components/presentation/expense-basic-info';
+@import './components/presentation/settings-tab';
+@import './components/presentation/dropzone';
+@import './components/presentation/image-cropper';
+@import './components/presentation/invoice-paper';
+@import './components/presentation/invoice-paper-editor';
+
+/**
+ *
+ */
+@import './components/containers/auth-page';
+@import './components/containers/onboarding';
+@import './components/containers/onboarding-step.scss';
+@import './components/containers/email-verification-dialog';
+@import './components/containers/business-setup-dialog';
+@import './components/containers/business-setup-success-dialog';
+@import './components/containers/clients';
+@import './components/containers/clients-create';
+@import './components/containers/client-detailed-info';
+@import './components/containers/clients-edit';
+@import './components/containers/clients-business-card';
+@import './components/containers/items';
+@import './components/containers/expenses';
+@import './components/containers/settings-page';
+@import './components/containers/payment-settings-page';
+@import './components/containers/banks-manager';
+@import './components/containers/team-members';
+@import './components/containers/sales';
+@import './components/containers/feedback';
+@import './components/containers/react-select';
+
+@media only screen and (max-device-width: 667px),
+screen and (max-width: 450px) {
+
+    #intercom-container .intercom-launcher-frame,
+    #intercom-container .intercom-launcher-discovery-frame,
+    #intercom-positioner-tree .intercom-launcher-frame,
+    #intercom-positioner-tree .intercom-launcher-discovery-frame {
+        right: 20px !important;
+        bottom: 80px !important;
+    }
+
+    #intercom-container .intercom-launcher-badge-frame,
+    #intercom-positioner-tree .intercom-launcher-badge-frame {
+        right: calc(20px - 4px) !important;
+        bottom: calc(20px + 100px) !important;
+    }
+}

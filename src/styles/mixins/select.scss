@@ -1,0 +1,78 @@
+@mixin select-container($color, $activeColor){
+    select{
+        &:focus{
+            &+button.select-toggle-button{
+                border-color: $activeColor !important;
+            }
+        }
+        &:disabled{
+            &+button.select-toggle-button{
+                opacity: 0.8;
+                @if(lightness($color) > 75){
+                    border-color: darken($color, 0.9);
+                } @else {
+                    border-color: lighten($color, 0.9);
+                }
+            }
+        }
+
+        &+button.select-toggle-button{
+            border-color: $color;
+        }
+    }
+}
+
+@mixin link-select-container($color, $activeColor){
+    select{
+        &:focus{
+
+        }
+        &:disabled{
+            &+button.select-toggle-button{
+                @if(lightness($color) > 75){
+                    color: darken($color, 0.9);
+                } @else {
+                    color: lighten($color, 0.9);
+                }
+            }
+        }
+        &+button.select-toggle-button{
+            color: $color;
+            border: none;
+            span.arrow{
+                display: none;
+            }
+            span.placeholder{
+                text-align: center;
+            }
+            &:disabled{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@mixin select-size($size){
+    @if($size == large){
+        button.select-toggle-button{
+            font-size: 1.7rem;
+            span.arrow{
+                i{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    } @else if($size == small) {
+        button.select-toggle-button{
+            @include border-radius(0.23rem);
+            font-size: 0.7rem;
+            padding: 0.75rem 1rem;
+            span.arrow{
+                padding: 0px 0rem 0rem 0.5rem;
+                i{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

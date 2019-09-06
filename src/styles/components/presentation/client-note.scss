@@ -1,0 +1,45 @@
+.client-note-container{
+
+    float: left;
+    width: 100%;    
+
+    .header{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 30px;
+        font-size: 18px;
+
+        color: #2D74DA;
+
+        display: block;
+    }
+
+    .note-content{
+        border: none;
+        width: 100%;
+        float: left;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+        border-radius: 6px;
+
+        height: 100px;
+        
+        padding: 0.5%;
+
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 18.4413px;
+
+        color: #31393C;
+    }
+}
+
+@media(max-width:480px){
+    .header{
+        margin-left:5px;
+        margin-top:10px;
+    }
+}

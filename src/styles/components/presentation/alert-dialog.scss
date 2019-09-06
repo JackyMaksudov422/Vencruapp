@@ -1,0 +1,23 @@
+.vc-alert-dialog{
+
+    .vc-alert-dialog-title{
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .vc-alert-dialog-content{
+        // padding-top: 10px;
+        // padding-left: 30px;
+        // padding-right: 30px;
+        text-align: center;
+        color: $black;
+        font-size: 1.3rem;
+    }
+
+    .vc-alert-dialog-actions{
+        justify-content: center;
+        padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

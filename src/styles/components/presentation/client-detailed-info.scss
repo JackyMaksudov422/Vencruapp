@@ -1,0 +1,207 @@
+.client-business-card{
+    min-height: 210px;
+    margin-bottom: 30px
+}
+
+.client-revenue-card{
+    height: 210px;
+    padding: 3%;
+
+    width: 100%;
+    float: right;
+
+    .title{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 24px;
+
+        color: #31393C;
+    }
+
+    .price-container{
+ 
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        font-size: 24px;
+        text-align: center;
+
+        color: #2D74DA;
+
+        text-align: right;
+    }
+}
+
+.table-container{
+
+    .header{
+
+        margin-top: 28px;
+        
+        .header-text{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 24px;
+    
+            color: #31393C;
+            margin-left: 100px;
+            margin-right: 73px;
+        }
+        .payment-header{
+            font-size:14px;
+            color:black !important;
+        }
+
+        .header-button{
+            img {
+                height: 18px;
+                width: 18px;
+                margin-right: 12px;
+            }
+
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 18px;
+
+            color: #8CA0B3;
+
+        }
+
+        .header-button:hover {
+            cursor: pointer;
+        }
+    }
+    
+}
+.client-page-button{
+    margin:5px;
+}
+
+.client-page-button:hover{
+    cursor: pointer;
+}
+
+.client-back-button{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+
+    color: #2D74DA;
+
+    img {
+        margin-right: 21px;
+    }
+
+    :hover{
+        cursor: pointer;
+    }
+}
+
+.button-container{
+    text-align: right;
+}
+
+.add-invoice-button{
+    color: white !important;
+    background:#2D74DA;
+    border-radius: 3px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 11.6335px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.96;
+
+    padding: 15px 23px 12px 23px;
+    margin-right: 12px;
+    width: 135px;
+}
+
+.edit-button{
+    color: white !important;
+    background: rgb(191, 23, 23);
+    border-radius: 3px;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 11.6335px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.96;
+
+    padding: 15px 32px 12px 32px;
+    width: 97px;
+}
+
+.edit-button{
+    margin:0 !important;
+}
+.add-invoice-button{
+    white-space: pre;
+}
+
+
+@media(max-width:768px){
+    .add-invoice-button{
+        padding:10px !important;
+    }
+    .edit-button{
+        margin: 20px !important;
+    }
+    .client-back-button > img{
+        margin:0 !important;
+        margin-right:5px !important;
+    }
+    
+}
+
+@media(max-width:750px){
+    .mid-col-btn{
+        display: none !important;
+    }
+}
+
+@media(max-width:480px){
+    
+    .edit-button{
+       padding:8px;
+       margin:0;
+    }
+    .add-invoice-button{
+        padding:8px !important;
+        white-space: pre;
+    }
+    
+
+}
+
+@media(max-width:360px){
+    .edit-button,.add-invoice-button{
+        padding:5.5px !important;
+    }
+}
+
+@media(max-width:320px){
+    .add-invoice-button{
+        padding:3.5px !important;
+        margin-left:2px;
+    } 
+}

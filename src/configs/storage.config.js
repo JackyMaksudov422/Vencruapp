@@ -1,0 +1,10 @@
+
+export const STORAGE_KEYS = {
+    ACCESS_TOKEN: '@983hg93rs-sdoif9384-soib98wrg-w0fh09whrg',
+    TOKEN_EXPIRY_DATE: '@9834h9348b-asldhgioa-389h98hfbs-siudbf98wg4',
+    USER_ID: '@38438g4334-erhf983394-oi8bsf89sf-2ug398g409',
+    CLIENTS_WELCOME_CARD_CLOSED: '@893493b9-834b3h498b3-498br3894-4983h4',
+    ITEMS_WELCOME_CARD_CLOSED: '@983j49834-934h34h8-vb89sef8g-389rvh384h',
+    EXPENSES_WELCOME_CARD_CLOSED: '@jvowbr9g8-9s8nf4w49-slkndksn-87348734',
+    SALES_WELCOME_CARD_CLOSED: '@wuhweuih-83h89h34-389h48h43-akjnkjdkjf',
+}

@@ -1,0 +1,85 @@
+.vc-sales-home{
+
+    .sales-total-outstanding{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-top;
+
+        .amount{
+            flex: 1;
+            padding-top: 16px;
+        }
+    }
+}
+
+.vc-sales-deleted-list{
+    .sales-total-outstanding{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-top;
+
+        .amount{
+            flex: 1;
+            padding-top: 16px;
+        }
+    }
+}
+
+.invoice-status{
+    padding: 0.45rem 1rem;
+    @include border-radius(2.49px);
+    background-color: $light;
+    color: $gray;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 9.54px;
+
+    &.invoice-status-sent{
+        background-color: rgba(#2D74DA, 0.3);
+        color: #2D74DA;
+    }
+
+    &.invoice-status-fully-paid{
+        background-color: #17BF5F;
+        color: #ffffff;
+    }
+
+    &.invoice-status-paid{
+        background-color: rgba(#17BF5F, 0.3);
+        color: #17BF5F;
+    }
+
+    &.invoice-status-due{
+        background-color: rgba(#FE8500, 0.3);
+        color: #FE8500;
+    }
+
+    &.invoice-status-overdue{
+        background-color: rgba(#F56A6A, 0.3);
+        color: #F56A6A;
+    }
+
+    &.invoice-status-deposit-paid{
+        background-color: rgba(#17BF5F, 0.3);
+        color: #17BF5F;
+    }
+
+    &.invoice-status-draft{
+        background-color: rgba(#8CA0B3, 0.3);
+        color: #8CA0B3;
+    }
+
+    &.invoice-status-cancelled{
+        background-color: #F56A6A;
+        color: #ffffff;
+    }
+}
+
+.null-recent-invoice{
+    text-align: center;
+    font-weight: bold;
+}

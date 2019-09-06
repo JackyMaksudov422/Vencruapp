@@ -1,0 +1,250 @@
+@import '../../mixins/input';
+
+.vc-input{
+    position: relative;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-color: $gray;
+    border-width: 1px;
+    border-style: solid;
+    @include border-radius(0.4rem);
+
+    &.disabled{
+        cursor: not-allowed !important;
+    }
+
+    textarea{
+        resize: none;
+    }
+
+    span.prepended-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: initial;
+        position: relative;
+        padding: 0rem 0.4rem 0px 1rem;
+        +input{
+            padding-left: 0px;
+        }
+    }
+
+    .react-phone-number-input{
+        flex: 1;
+        .react-phone-number-input__row{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .react-phone-number-input__country{
+                padding: 0rem 0.4rem 0rem 0.8rem;
+                margin-right: 0;
+                >.react-phone-number-input__icon{
+                    border: none;
+                }
+            }
+            input{
+                flex: 1;
+                border-width: 0px;
+                border-color: rgba(0,0,0,0);
+                border-style: solid;
+                padding: 1.35rem 0.4rem;
+                font-size: 14px;
+                color: $black;
+                background-color: rgba(0,0,0,0);
+                @include border-radius($border-radius);
+        
+                &:focus{
+                    outline: none !important;
+                }
+            
+                &:disabled{
+                    cursor: not-allowed !important;
+                }
+            
+                /**
+                 * Button sizes
+                 */
+                &.large-button{
+                    @include button-size(large);
+                }
+                &.small-button{
+                    @include button-size(small);
+                }
+        
+                &::placeholder {
+                    color: $input-placeholder-color;
+                }
+                
+                &:-ms-input-placeholder {
+                    color: $input-placeholder-color;
+                }
+                
+                &::-ms-input-placeholder {
+                    color: $input-placeholder-color;
+                }
+            }
+        }
+    }
+
+    input, textarea{
+        flex: 1;
+        border-width: 0px;
+        border-color: rgba(0,0,0,0);
+        border-style: solid;
+        padding: 1rem 1rem;
+        font-size: 14px;
+        height: 44px;
+        width:100%;
+        color: $black;
+        @include border-radius(0.3rem);
+
+        &:focus{
+            outline: none !important;
+        }
+    
+        &:disabled{
+            cursor: not-allowed !important;
+        }
+    
+        /**
+         * Button sizes
+         */
+        &.large-button{
+            @include button-size(large);
+        }
+        &.small-button{
+            @include button-size(small);
+        }
+
+        &::placeholder {
+            color: darken($light, 60%);
+        }
+        
+        &:-ms-input-placeholder {
+            color: darken($light, 60%);
+        }
+        
+        &::-ms-input-placeholder {
+            color: darken($light, 60%);
+        }
+    }
+
+    span.variant-icon{
+        display: none;
+        padding: 0px 0.8rem;
+        line-height: 0rem;
+        >i{
+            font-size: 1.2rem;
+        }
+    }
+
+    .input-adornment{
+        height: 100%;
+        >button, a{
+            width: 100%;
+            height: 100%;
+            padding: 0px 0.8rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: $gray;
+            background: none;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            &:hover{
+                cursor: pointer;
+            }
+            >i{
+                font-size: 1.2rem;
+            }
+        }
+
+        +span.variant-icon{
+            padding: 0px 0.8rem 0px 0.5rem;
+        }
+    }
+
+    /**
+     * basic input
+     */
+
+    //  default
+    @include input($gray, $primary);
+
+    &.input-focused{
+        @include input($primary, lighten($primary, 15%));
+    }
+
+    &.input-success{
+        @include input($green, lighten($green, 5%));
+        span.variant-icon{
+            display: inline-block;
+            color: $green;
+        }
+    }
+
+    &.input-warning{
+        @include input($orange, lighten($orange, 15%));
+        span.variant-icon{
+            display: inline-block;
+            color: $orange;
+        }
+    }
+
+    &.input-danger{
+        @include input($red, lighten($red, 5%));
+        span.variant-icon{
+            display: inline-block;
+            color: $red;
+        }
+    }
+
+    /**
+     * button sizes
+     */
+     &.input-large{
+        @include input-size(large);
+    }
+    &.input-small{
+        @include input-size(small);
+    }
+
+    label.label{
+        position: absolute;
+        left: 0;
+        top: -7px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 1rem;
+
+        >span{
+            display: inline-block;
+            background-color: #fff;
+            padding: 0px 0px;
+            color: $gray;
+            font-size: 0.85rem;
+            max-width: 100%;
+            overflow: visible;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: 13px;
+        }
+    }
+}
+
+label.input-label{
+    display: inline-block;
+    color: $gray;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 100%;
+}

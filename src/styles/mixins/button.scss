@@ -1,0 +1,92 @@
+@mixin button($backgroundColor, $backgroundHoverColor, $textColor, $textHoverColor){
+    background-color: $backgroundColor;
+    color: $textColor;
+    outline-color: $backgroundColor;
+    &:hover, &:focus{
+        background-color: $backgroundHoverColor;
+        color: $textHoverColor;
+        @if(lightness($backgroundColor) > 70){
+            border-color: darken($backgroundColor, 4);
+            border-width: 1px;
+        }
+    }
+
+    &:disabled, &.disabled{
+        background-color: lighten($backgroundColor, 10%);
+        @if(lightness($backgroundColor) > 75){
+            background-color: desaturate($backgroundColor, 20%);
+            color: lighten($textColor, 10%);
+        } @else {
+            color: rgba(darken($textColor, 4%), 0.9);
+            *{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+@mixin button-inverse($color, $colorHovered){
+    background-color: #fff;
+    color: $color;
+    border-color: darken(#ffffff, 5);
+    border-width: 1px;
+    outline-color: $color;
+    &:hover, &:focus{
+        background-color: #f5f5f5;
+        color: $colorHovered;
+    }
+
+    &:disabled, &.disabled{
+        background-color: #f5f5f5;
+        color: rgba(darken($color, 4%), 0.7);
+        *{
+            opacity: 0.7;
+        }
+    }
+}
+
+@mixin button-outline($color, $colorHovered){
+    background-color: rgba(0,0,0,0);
+    color: $color;
+    border-color: $color;
+    border-width: 1px;
+    outline-color: $color;
+    &:hover, &:focus{
+        border-color: $colorHovered;
+        color: $colorHovered;
+    }
+
+    &:disabled, &.disabled{
+        color: rgba(darken($color, 4%), 0.6);
+        border-color: rgba(darken($color, 4%), 0.6);
+        *{
+            opacity: 0.6;
+        }
+    }
+}
+
+@mixin button-link($color, $colorHovered){
+    background-color: rgba(0,0,0,0);
+    color: $color;
+    outline-color: $color;
+    border-width: 0px;
+    &:hover, &:focus{
+        color: $colorHovered;
+    }
+
+    &:disabled, &.disabled{
+        color: rgba(darken($color, 4%), 0.6);
+        *{
+            opacity: 0.6;
+        }
+    }
+}
+
+@mixin button-size($size){
+    @if($size == large){
+        font-size: 1.4rem;
+    } @else if($size == small) {
+        font-size: 0.7rem;
+        @include border-radius(0.23rem);
+    }
+}

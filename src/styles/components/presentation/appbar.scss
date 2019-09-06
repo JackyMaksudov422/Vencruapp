@@ -1,0 +1,143 @@
+.vc-appbar-mobile{
+    display: none;
+}
+.vc-appbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $appbar-height;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+
+    >.brand-container{
+        position: relative;
+        float: left;
+        width: $menubar-width * 0.4;
+        height: $appbar-height;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >img.brand{
+            width: $appbar-height * 0.5;
+        }
+    }
+
+    .page-name-container{
+        position: relative;
+        float: left;
+        width: $menubar-width * 0.6;
+        height: $appbar-height;
+        background-color: $blue;
+        padding: 0px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    .content{
+        flex: 1;
+        height: $appbar-height;
+        background-color: $white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .search-container{
+            flex: 1;
+            padding: 0px 15px 0px 150px;
+        }
+
+        .user-content-container{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0px 30px;
+
+            .send-button{
+                display: inline-block;
+                margin-right: 1.5rem;
+                padding: 0.8rem 0.8rem;
+
+                >i{
+                    font-size: 0.8rem;
+                }
+            }
+
+            .create-dropdown-button{
+                display: inline-block;
+                margin-right: 1.5rem;
+            }
+
+            .notification-button{
+                display: inline-block;
+                padding: 0.8rem 0.8rem;
+                outline: none;
+                margin-right: 1.5rem;
+            }
+
+            .user-dd-button-container{
+                display: inline-block;
+                .dd-toggle-button{
+                    background: none;
+                    border: none;
+                    padding: 0.5rem 0.5rem;
+                    text-align: right;
+                    font-weight: normal;
+                    color: $gray;
+                }
+                @media (max-width: 576px) {
+                    width: 52px; // Done to display the image on mobile screens
+                }
+            }
+
+        }
+    }
+}
+
+.vc-appbar-user{
+    position: relative;
+    max-width: 150px;
+
+    .user-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .identity{
+            flex: 1;
+            display: inline-block;
+            span{
+                position: relative;
+                float: left;
+                width: 100%;
+                margin: 0px 0px;
+                text-align: right;
+                // @extend %ellipsis;
+                color: $gray;
+                padding-right: 10px;
+            }
+        }
+
+        .avatar{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            @include border-radius(12px);
+        }
+    }
+}
+
+@media(max-width:768px){
+    .vc-appbar-mobile{
+        display: flex;
+        flex-direction: row;
+    }
+}

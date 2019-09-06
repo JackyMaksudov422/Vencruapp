@@ -1,0 +1,52 @@
+.vc-page-dialog.client-business-card-page-dialog{
+    .vc-page-dialog-inner{
+        >.vc-page-dialog-content{
+            max-width: 512px;
+            >.vc-page-dialog-body {
+                padding: 40px 40px !important;
+
+                .business-card-container{
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    .vc-business-card{
+                        @include box-shadow(0px 0px 40px -10px rgba(0,0,0,0.4));
+                    }
+                }
+
+                .client-fetch-error{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                    background-color: #ffffff;
+
+                    .error-title{
+                        color: $primary;
+                        font-weight: normal;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    }
+
+                    .error-description{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        margin-top: 0px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    .actions-container{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

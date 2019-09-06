@@ -1,0 +1,218 @@
+@import '../../mixins/dropdown';
+
+.vc-dd{
+    display: inline-block;
+    position: relative;
+    // default style
+    @include dd-container($gray, $primary);
+
+    &.button-block{
+        width: 100%;
+    }
+
+    &.button-full{
+        width: 100%;
+        @include border-radius(0rem);
+    }
+
+    &.vc-dd-primary{
+        @include dd-container($primary, #ffffff);
+    }
+
+    &.vc-dd-success{
+        @include dd-container($green, #ffffff);
+    }
+
+    &.vc-dd-warning{
+        @include dd-container($orange, #ffffff);
+    }
+
+    &.vc-dd-danger{
+        @include dd-container($red, #ffffff);
+    }
+
+    &.vc-dd-gray{
+        @include dd-container($gray, #ffffff);
+    }
+
+    &.vc-dd-link{
+        @include link-dd-container($gray);
+    }
+
+    &.vc-dd-link-primary{
+        @include link-dd-container($primary);
+    }
+
+    &.vc-dd-link-success{
+        @include link-dd-container($green);
+    }
+
+    &.vc-dd-link-warning{
+        @include link-dd-container($orange);
+    }
+
+    &.vc-dd-link-danger{
+        @include link-dd-container($red);
+    }
+
+    &.vc-dd-link-gray{
+        @include link-dd-container($gray);
+    }
+
+    &.disabled{
+        cursor: not-allowed !important;
+    }
+
+    &.dd-icon-button{
+        button{
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include border-radius(20px);
+          span.icon-button-icon{
+              font-size: 1rem;
+          }
+        }
+    }
+
+    >input{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    button.dd-toggle-button{
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        outline: none;
+        padding: 0.8rem 1rem;
+        border-width: 1px;
+        border-style: solid;
+        font-size: 0.85rem;
+        @include border-radius(0.3rem);
+        font-weight: 600;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        span.placeholder{
+            flex: 1;
+            text-align: left;
+            &.icon-label{
+                display: inline-block;
+                font-size: 1rem;
+            }
+            +i{
+                display: inline-block;
+                font-size: 0.9rem;
+            }
+        }
+
+        span.arrow{
+            display: inline-block;
+            margin-left: 4px;
+            >i{
+                font-size: 1rem;
+            }
+        }
+    }
+    
+
+    &.dd-align-right{
+        .dd-options-container{
+            left: initial;
+            right: 0;
+        }
+    }
+
+    .dd-options-container{
+        position: absolute;
+        top:100%;
+        left:0;
+        width: 100%;
+        min-width: 200px;
+        max-height: 200px;
+        overflow: auto;
+        background-color: #fff;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $gray;
+        @include border-bottom-radius(0.3rem);
+        border-top-width: 0px;
+        z-index: 1000;
+
+        &.dropup{
+            @include border-top-radius(0.3rem);
+            @include border-bottom-radius(0rem);
+            border-top-width: 1px;
+            border-bottom-width: 0px;
+        }
+
+        .dd-options-list{
+            position: relative;
+            float: left;
+            width: 100%;
+            list-style: none;
+            padding: 0px 0px;
+            margin: 0px 0px;
+
+            .dd-options-item{
+                position: relative;
+                float: left;
+                width: 100%;
+                &.destructive{
+                    button{
+                        color: $red;
+                    }
+                }
+                &.selected{
+                    background-color: $primary;
+                    >button{
+                        color: #fff;
+                    }
+                }
+
+                &:hover{
+                    background-color: $light;
+                    cursor: pointer;
+                }
+
+                >button{
+                    position: relative;
+                    width: 100%;
+                    padding: 1rem 1rem;
+                    font-size: 0.8rem;
+                    display: inline-block;
+                    background: none;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+
+                    &:hover{
+                        // background-color: $light;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * button sizes
+     */
+     &.large-dd-container{
+        @include dd-size(large);
+    }
+    &.small-dd-container{
+        @include dd-size(small);
+    }
+}

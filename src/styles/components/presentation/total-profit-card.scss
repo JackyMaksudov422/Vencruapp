@@ -1,0 +1,53 @@
+.vc-total-profit-card{
+    position: relative;
+    float: left;
+    width: 100%;
+
+    >.title{
+        @extend %spanned;
+        color: $black;
+        font-weight: normal;
+    }
+
+    .placeholder-heading{
+        @extend %spanned;
+        .placeholder-title{
+            position: relative;
+            float: left;
+            margin-left: 60px;
+            color: $primary;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+
+        .placeholder-filters{
+            position: relative;
+            float: right;
+            width: 237px;
+            height: 44px;
+            background-color: $light;
+            @include border-radius(0.3rem);
+        }
+    }
+
+    .placeholder-graph{
+        @extend %spanned;
+        margin: 30px 0px;
+        background-color: $light;
+        height: 120px;
+        @include border-radius(0.2rem);
+        background-color: $primary;
+        background-image: linear-gradient(to right, lighten($primary, 21%) , $primary);
+        background-image: -webkit-linear-gradient(left, lighten($primary, 21%) , $primary);
+        background-image: -moz-linear-gradient(left, lighten($primary, 21%) , $primary);
+        background-image: -o-linear-gradient(left, lighten($primary, 21%) , $primary);
+    }
+
+    .placeholder-bottom-line{
+        @extend %spanned;
+        height: 11px;
+        background-color: $light;
+        @include border-radius(0.2rem);
+    }
+}

@@ -1,0 +1,85 @@
+@mixin invoice-paper($name, $color){
+	&.invoice-paper-#{$name}{
+		.invoice-text{
+			color: $color;
+		}
+		.invoice-paper-body{
+			>div{
+				border-bottom-color: $color;
+
+				.items-list-heading{
+					border-top-color: $color;
+
+					.title{
+						color: $color;
+					}
+
+					.subtitle{
+						color: $gray;
+					}
+				}
+
+				.tax-field{
+					border-color: $color;
+				}
+			}
+		}
+		.invoice-input{
+			&.active, &.focus{
+				border-color: $color !important;
+			}
+		}
+
+		.invoice-button{
+			background-color: $color;
+			&:hover{
+				@if( lightness($color) < 40 ){
+					background-color: lighten($color, 15%);
+				}
+				@else{
+					background-color: darken($color, 15%);
+				}
+			}
+			&:active, &:focus{
+				outline-color: $color !important;
+			}
+		}
+
+		.invoice-select{
+			select{
+				&:focus{
+		            &+button{
+		                border-color: $color !important;
+		            }
+		        }
+			}
+		}
+
+		&.invoice-paper-template-modern{
+
+			.invoice-paper-body{
+				>div{
+					.items-list-heading{
+						@include border-radius(3px);
+						border-top: none;
+						background-color: $color;
+						padding: 15px 0px 15px;
+
+						.title{
+							color: #fff;
+							padding-left: 15px;
+							padding-right: 15px;
+						}
+
+						.subtitle{
+							display: none;
+							color: #fff;
+							padding-left: 15px;
+							padding-right: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

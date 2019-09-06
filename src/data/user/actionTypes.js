@@ -1,0 +1,18 @@
+/**
+ * Onboarding action types
+ */
+export const ONBOARDING_REQUEST = 'ONBOARDING_REQUEST';
+export const ONBOARDING_SUCCESS = 'ONBOARDING_SUCCESS';
+export const ONBOARDING_FAILURE = 'ONBOARDING_FAILURE';
+
+/**
+ * User info action types
+ */
+export const GET_USER_INFO_REQUEST = 'GET_USER_INFO_REQUEST';
+export const GET_USER_INFO_SUCCESS = 'GET_USER_INFO_SUCCESS';
+export const GET_USER_INFO_FAILURE = 'GET_USER_INFO_FAILURE';
+
+export const SET_USER_INFO = 'SET_USER_INFO';
+export const SET_CURRENT_BUSINESS = 'SET_CURRENT_BUSINESS';
+
+export const BUSINESS_SETUP_STATE = 'BUSINESS_SETUP_STATE';

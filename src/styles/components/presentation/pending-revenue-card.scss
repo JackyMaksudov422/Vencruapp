@@ -1,0 +1,124 @@
+.vc-pending-revenue-card{
+    position: relative;
+    float: left;
+    width: 100%;    
+
+    .vc-plain-card{
+        min-height: 400px;
+    }
+
+    >.title{
+        @extend %spanned;
+        color: $black;
+        font-weight: normal;
+    }
+
+    .placeholder-heading{
+        @extend %spanned;
+        .placeholder-title{
+            position: relative;
+            float: left;
+            margin-left: 60px;
+            color: $primary;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+
+        .placeholder-filters{
+            position: relative;
+            float: right;
+            width: 237px;
+            height: 44px;
+            background-color: $light;
+            @include border-radius(0.3rem);
+        }
+    }
+
+    .placeholder-graph{
+        @extend %spanned;
+        margin: 30px 0px;
+        background-color: $light;
+        height: 120px;
+        @include border-radius(0.2rem);
+
+        .placeholder-graph-inner{
+            position: relative;
+            float: left;
+            width: 75%;
+            height: 100%;
+            background-color: #FDCEAC;
+        }
+    }
+
+    .placeholder-bottom-line{
+        @extend %spanned;
+        height: 11px;
+        background-color: $light;
+        @include border-radius(0.2rem);
+    }
+
+
+    .heading{
+        @extend %spanned;
+
+        margin-bottom: 20px;
+
+        .title{            
+            position: relative;
+            float: left;            
+            
+            .main-text{
+                color: $primary;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                display: block;
+            }
+            .sub-text{
+                font-size: 12px;
+                color: #8CA0B3;
+            }
+        }
+
+        .filters{
+            float: right;
+        }
+    }
+
+    .info-row{
+        width: 100%;
+
+        .text{
+            padding: 1%;
+
+            * {
+                display: block;
+                margin-bottom: 14px;
+            }
+            .info-heading{
+                font-weight: bold;
+                line-height: 42px;
+                font-size: 24px;
+                color: #17BF5F;                
+            }
+
+            .info-text{
+                line-height: 32px;
+                font-size: 18px;
+                color: #8CA0B3;
+            }
+
+            .info-link{
+                line-height: 32px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.vc-pending-revenue-card.placeholder-card{
+    .vc-plain-card{
+        min-height: auto;
+    }    
+}

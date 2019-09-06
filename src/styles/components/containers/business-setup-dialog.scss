@@ -1,0 +1,19 @@
+.business-setup-dialog{
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+
+    .dialog-image{
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+
+    .sub-heading{
+        font-size: 1.2rem;
+    }
+}

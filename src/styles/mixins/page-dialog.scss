@@ -1,0 +1,8 @@
+@mixin page-dialog($backgroundColor, $textColor){
+    background-color: $backgroundColor;
+    color: $textColor;
+    @media screen and (max-width:414px){
+        height: 100% !important;
+        width:100%;
+    }
+}

@@ -1,0 +1,503 @@
+.vc-plain-card{
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+    @include border-radius(0.2rem);
+    @include box-shadow(0 0 20px -10px rgba(0,0,0,0.6));
+    padding: 34px 34px;
+
+    &.transparent{
+        background: none;
+    }
+
+    >.vc-plain-card-collapse-button{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: solid 2px $gray;
+        color: $gray;
+        @include border-radius(12px);
+        cursor: pointer;
+        >i{
+            font-size: 1.2rem;
+        }
+    }
+
+    &.quick-stats-card{
+        padding: 1.2rem 1.2rem;
+        .quick-stats-card-inner{
+            position: relative;
+            float: left;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .quick-stats-card-content{
+                position: relative;
+                flex: 1;
+
+                .quick-stats-card-header{
+                    margin: 0px 0px 10px;
+                    font-weight: normal;
+                    font-size: 0.8rem;
+                }
+
+                .quick-stats-card-value{
+                    position: relative;
+                    width: 100%;
+                    margin: 0px 0px;
+                    font-size: 1.6rem;font-weight:600;
+                    color: $black;
+                }
+            }
+
+            .quick-stats-card-icon-container{
+                flex: initial;
+                position: relative;
+                width: 72px;
+                height: 72px;
+                background-color: $blue;
+                text-align: center;
+                @include border-radius(0.3rem);
+
+                >img{
+                    display: inline-block;
+                    max-width: 100%;
+                }
+
+                i{
+                    color: #ffffff;
+                    font-size: 1.8rem;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &.vc-business-card{
+        padding: 2rem 2rem;height:200px;
+
+        &.placeholder{
+            >.vc-business-card-inner{
+                position: relative;
+                float: left;
+                width: 100%;
+                
+                >.info-section{
+                    width: 80%;
+    
+                    >.person-name{
+                        display: block;
+                        background-color: $light;
+                        width: 40%;
+                        overflow: hidden;
+                        height: 30px;
+                        @include border-radius(0.3rem);
+                        color: rgba(0,0,0,0);
+                        *{
+                            opacity: 0;
+                        }
+                    }
+    
+                    >.business-name{
+                        display: block;
+                        background-color: $light;
+                        width: 50%;
+                        overflow: hidden;
+                        height: 15px;
+                        @include border-radius(0.2rem);
+                        color: rgba(0,0,0,0);
+                        *{
+                            opacity: 0;
+                        }
+                    }
+    
+                    >.business-street-address, >.business-city-name{
+                        display: block;
+                        background-color: $light;
+                        width: 20%;
+                        overflow: hidden;
+                        height: 10px;
+                        @include border-radius(0.2rem);
+                        color: rgba(0,0,0,0);
+                        *{
+                            opacity: 0;
+                        }
+                    }
+    
+                    >.business-country-name{
+                        display: block;
+                        background-color: $light;
+                        width: 25%;
+                        overflow: hidden;
+                        height: 15px;
+                        @include border-radius(0.2rem);
+                        color: rgba(0,0,0,0);
+                        *{
+                            opacity: 0;
+                        }
+                    }
+    
+                    >.business-phone-number{
+                        display: block;
+                        background-color: $light;
+                        width: 38%;
+                        overflow: hidden;
+                        height: 15px;
+                        @include border-radius(0.2rem);
+                        color: rgba(0,0,0,0);
+                        *{
+                            opacity: 0;
+                        }
+                    }
+    
+                }
+            }
+        }
+
+        >.vc-business-card-inner{
+            position: relative;
+            float: left;
+            width: 100%;
+            
+            >.info-section{
+                width: 80%;
+
+                >.person-name{
+                    color: $black;
+                    margin: 0px 0px 0.5rem;
+                }
+
+                >.business-name{
+                    display: inline-block;
+                    margin: 0px 0px 0.9rem;
+                }
+
+                >.business-street-address, >.business-city-name{
+                    position: relative;
+                    width: 100%;
+                    display: inline-block;
+                    margin: 0px 0px 0.6rem;
+                }
+
+                >.business-country-name{
+                    color: $black;
+                    margin: 0px 0px 0.6rem;
+                }
+
+                >.business-phone-number{
+                    display: inline-block;
+                    font-weight: normal;
+                    color: $primary;
+                }
+
+            }
+        }
+
+        >.dots-section{
+            position: absolute;
+            right: 10px;
+            top: 0;
+            width: 40%;
+            height: 94%;
+            background-position: 100% center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 11px 30px;
+        }
+    }
+
+    &.vc-expense-card{
+        padding: 1rem 1rem;
+        border: dashed 1px $light;
+        >.vc-expense-card-inner{
+            display: block;
+            width: 100%;
+            
+            .expense-category-bar{
+                position: relative;
+                float: left;
+                width: 100%;
+                height: 9px;
+                @include border-radius(4.5px);
+                background-color: $primary;
+                margin-bottom: 10px;
+            }
+
+            .expense-category{
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 0px 15px;
+                >i{
+                    display: block;
+                    font-size: 19px;
+                    line-height: 0;
+                    color: $primary;
+                }
+                >span{
+                    margin-left: 7.5px;
+                    font-size: 14px;
+                    line-height: 17px;
+                    font-weight: normal;
+                    color: $black;
+                    text-align: left;
+                    min-height: 35px;
+                }
+            }
+
+            >.expense-name{
+                display: block;
+                width: 100%;
+                color: $black;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                font-weight: black;
+            }
+
+            >.expense-date{
+                font-size: 14px;
+                line-height: 17px;
+                color: $gray;
+                font-weight: black;
+                text-align: center;
+            }
+
+            >.expense-amount{
+                font-size: 18px;
+                line-height: 22px;
+                color: $black;
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+
+    }
+
+    &.settings-user-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 7.5px 15px 15px 15px;
+
+        >.user-avatar{
+            position: relative;
+            float: left;
+            margin-left: 15px;
+            margin-top: 15px;
+            margin-bottom: 7.5px;
+            >img.avatar{
+                display: inline-block;
+                width: 122px;
+                height: 122px;
+                border: solid 6px $primary;
+                @include border-radius(122px);
+            }
+        }
+
+
+        >.user-info{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 60px;
+
+            >.user-info-first{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                min-height: 45px;
+                margin-bottom: 15px;
+
+                .user-info-accolades{
+                    flex: 1;
+                }
+            }
+
+            >.user-info-second{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                >ul.user-info-list{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0px 0px;
+                    margin: 0px 0px;
+                    list-style: none;
+
+                    >li{
+                        position: relative;
+                        float: left;
+                        padding: 0px 15px;
+                        &:first-child{
+                            padding-left: 0px;
+                        }
+                        &:last-child{
+                            padding-right: 0px;
+                        }
+                        >.title{
+                            position: relative;
+                            float: left;
+                            width: 100%;
+                            margin-bottom: 0px;
+                        }
+                        >.info{
+                            position: relative;
+                            float: left;
+                            width: 100%;
+                            margin-top: 0px;
+                        }
+                    }
+                }
+
+                .upload-profile-pic{
+                    position: relative;
+                    float: right;
+
+                    >button{
+                        z-index: 0;
+                    }
+
+                    >input{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.vc-invoice-card{
+        padding: 0px 0px 48px 0px;
+        @include border-radius(9px);
+        overflow: hidden;
+
+        .mark-as-paid-button{
+            background: none;
+            border: none;
+            color: $primary;
+            outline: none;
+            font-size: 11.63px;
+            line-height: 14px;
+            padding: 0px 0px;
+            margin: 10px 15px 0px 0px;
+
+            &:hover{
+                color: darken($primary, 15%);
+            }
+        }
+
+        .vc-invoice-card-inner{
+            position: relative;
+            float: left;
+            width: 100%;
+            padding: 0px 15px;
+
+            .invoice-number{
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: normal;
+                color: $gray;
+                text-align: left;
+            }
+
+            .client-name{
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: bold;
+                color: $black;
+                text-align: left;
+            }
+
+            .issue-date{
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: bold;
+                color: $gray;
+                text-align: left;
+            }
+
+            .invoice-amount{
+                font-size: 24px;
+                line-height: 29px;
+                font-weight: normal;
+                color: $black;
+                text-align: right;
+            }
+        }
+
+        .invoice-status{
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            text-align: center;
+            height: 48px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: $light;
+            span{
+                font-size: 16.93px;
+                color: $gray;
+                font-weight: bold;
+            }
+
+            &.invoice-status-overdue{
+                background-color: rgba(245, 106, 106, 0.3);
+                span{
+                    color: rgba(0, 0, 0, 0.44);
+                }
+            }
+
+            &.invoice-status-not-paid{
+                background-color: rgba(#FE8500, 0.3);
+                span{
+                    color: rgba(0, 0, 0, 0.44);
+                }
+            }
+
+            &.invoice-status-paid{
+                background-color: rgba(160, 212, 104, 0.3);
+                span{
+                    color: rgba(0, 0, 0, 0.44);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width : 768px){
+    .vc-plain-card.quick-stats-card {
+      
+        margin: 8px 0;
+    }
+    .vc-table-controls .controls-list{flex:inherit !important;display:block !important;}
+    .spanned.mv30 {
+        padding: 0;
+    }
+    .form-fields-inner label.input-label{margin-bottom:5px;}
+}

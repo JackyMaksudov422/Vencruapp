@@ -1,0 +1,69 @@
+.vc-checkbox{
+    display: inline-block;
+    position: relative;
+
+    &.square{
+        .checkbox-mark-container{
+            .checkbox-mark{
+                border-width: 1px;
+                @include border-radius(0.3rem);
+            }
+        }
+    }
+
+    .checkbox-mark-container{
+        display: inline-block;
+        z-index: 1;
+        .checkbox-mark{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18px;
+            height: 18px;
+            border: solid 1px $gray;
+            margin-right: 5px;
+            @include border-radius(1rem);
+            >i{
+                color: $primary;
+                font-size: 1rem;
+                opacity: 0;
+            }
+        }
+    }
+
+    .checkbox-label{
+        display: inline-block;
+        z-index: 1;
+        margin-top: -6px;
+        color: $black;
+        font-size: 1rem;
+        line-height: 0rem;
+        font-weight: 400;
+        vertical-align: middle;
+
+    }
+
+    input[type='checkbox']{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 5;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:checked{
+            +.checkbox-mark-container{
+                .checkbox-mark{
+                    i{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

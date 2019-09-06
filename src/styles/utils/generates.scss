@@ -1,0 +1,80 @@
+// Generates width, height, line height and z-index, etc helper from 0 to 100px incremented by 5
+$generate_size:0;
+$generate_spacing: 0px;
+@while $generate_size < 201 {
+	// size
+	.w#{$generate_size}{ width: $generate_spacing + $generate_size !important; }
+	.h#{$generate_size}{ height: $generate_spacing + $generate_size !important; }
+	.wh#{$generate_size}{
+		width: $generate_spacing + $generate_size !important;
+		height: $generate_spacing + $generate_size !important;
+	}
+	.mw#{$generate_size}{ min-width: $generate_spacing + $generate_size !important; }
+	.mh#{$generate_size}{ min-height: $generate_spacing + $generate_size !important; }
+	.mwh#{$generate_size}{
+		min-width: $generate_spacing + $generate_size !important;
+		min-height: $generate_spacing + $generate_size !important;
+	}
+	.mxw#{$generate_size}{ max-width: $generate_spacing + $generate_size !important; }
+	.mxh#{$generate_size}{ max-height: $generate_spacing + $generate_size !important; }
+	.mxwh#{$generate_size}{
+		max-width: $generate_spacing + $generate_size !important;
+		max-height: $generate_spacing + $generate_size !important;
+	}
+
+	// position
+	.r#{$generate_size}{ right: $generate_spacing + $generate_size !important; }
+	.l#{$generate_size}{ left: $generate_spacing + $generate_size !important; }
+	.t#{$generate_size}{ top: $generate_spacing + $generate_size !important; }
+	.b#{$generate_size}{ bottom: $generate_spacing + $generate_size !important; }
+
+	// z-index
+	.zi#{$generate_size}{
+		z-index: $generate_size !important ;
+	}
+
+	// margin
+	.mt#{$generate_size}{ margin-top: $generate_spacing + $generate_size !important; }
+	.mr#{$generate_size}{ margin-right: $generate_spacing + $generate_size !important; }
+	.mb#{$generate_size}{ margin-bottom: $generate_spacing + $generate_size !important; }
+	.ml#{$generate_size}{ margin-left: $generate_spacing + $generate_size !important; }
+	.mv#{$generate_size}{ 
+		margin-top: $generate_spacing + $generate_size !important;
+		margin-bottom: $generate_spacing + $generate_size !important;
+	}
+	.mh#{$generate_size}{ 
+		margin-left: $generate_spacing + $generate_size !important;
+		margin-right: $generate_spacing + $generate_size !important;
+	}
+
+	// padding
+	.pt#{$generate_size}{ padding-top: $generate_spacing + $generate_size !important; }
+	.pr#{$generate_size}{ padding-right: $generate_spacing + $generate_size !important; }
+	.pb#{$generate_size}{ padding-bottom: $generate_spacing + $generate_size !important; }
+	.pl#{$generate_size}{ padding-left: $generate_spacing + $generate_size !important; }
+	.pv#{$generate_size}{ 
+		padding-top: $generate_spacing + $generate_size !important;
+		padding-bottom: $generate_spacing + $generate_size !important;
+	}
+	.ph#{$generate_size}{ 
+		padding-left: $generate_spacing + $generate_size !important;
+		padding-right: $generate_spacing + $generate_size !important;
+	}
+
+	// increment generate size by 1
+	$generate_size:  $generate_size + 1;
+}
+
+/**
+ * UI Colors
+ * Backgoround and text color generation
+ */
+
+@each $color, $value in $ui-colors{
+	.bg-#{$color}{
+		background-color: $value !important;
+	}
+	.text-#{$color}{
+		color: $value !important;
+	}
+}

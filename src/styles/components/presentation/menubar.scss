@@ -1,0 +1,263 @@
+body,html{
+    height: auto;
+}
+
+@media(max-width:480px){
+    .vc-menubar-nav-list li{
+        margin:0.8em !important;
+        width:14% !important;
+        
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #more-dropdown {
+        display: none !important;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .vc-page-dialog.create-client-page-dialog .vc-page-dialog-inner .vc-page-dialog-content .vc-page-dialog-body{
+        overflow-y: scroll;
+    }
+    .vc-page-dialog .dotted-background{
+        display: none;
+    }
+    .nav-item .active{
+        color:#2D74DA !important;
+    }
+    .more-dropdown-icon{
+        font-size:17px;
+    }
+    #more-dropdown.show{
+        display: block !important;
+        bottom:0;
+        right:0;
+        width:100vw;
+        margin-bottom:75px;
+        box-shadow: none;
+        background:white;
+        
+    }
+    #more-dropdown li{
+        display: block;
+        width:100vw;
+        
+    }
+    
+    .dropdown-menu li{
+        width:20px;
+        color:#DADADA;
+        margin:20px;
+    }
+    .dropdown-menu ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .vc-menubar{
+        margin-top:80px;
+        position:fixed;
+        bottom:0;
+        background:white;
+        max-width:100%;
+        min-width: 100%;
+        z-index: 3;
+        border-top: 1px solid #eee;
+      }
+      .arrow > i{
+          display: none !important;
+      }
+      .vc-appbar-notification > .trigger-button {
+          margin-right: 0.4rem !important;
+      }
+      .vc-appbar .content .user-content-container{
+          padding:0 !important;
+      }
+      .vc-appbar .content{
+          background-color:#2D74DA !important;
+      }
+      .page-name-container span{
+        margin-left:-60%;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 18px;
+      }
+      button.vc-button.vc-button-link-gray, a.vc-button.vc-button-link-gray{
+        //   color:white;
+        margin-bottom: 0.5rem;
+      }
+      #root > .app-body .app-authenticated-body {
+          margin-top:2em;
+      }
+      
+      .vc-appbar .page-name-container,.vc-appbar .content{
+          height:58px !important;
+      }
+      .vc-appbar .page-name-container{
+          background-color:#2D74DA !important;
+      }
+        .vc-appbar .user-content .identity,.vc-appbar .brand-container, .vc-appbar .search-container,
+        .user-content-container .create-dropdown-button   
+        {
+            display: none !important;
+        }
+      #root > .app-body.appbar-visible{
+          padding-top:0;
+      }
+      .vc-menubar-nav-list{
+          list-style-type:none;
+          padding:0;
+          margin:0;
+      }
+      .vc-menubar-nav-list li{
+          float: left;
+          margin:1.2em;
+          text-align: center;
+          width:15%;
+      }
+      .nav-icon{
+          display:block;
+          text-align: center;
+      }
+      .nav-icon img{
+          color:#DADADA;
+      }
+   
+      .vc-menubar-nav-list li:nth-child(n+6){
+          display: none;
+          
+      }
+      a{
+          color:inherit;
+      }
+      .page-click-outer {
+        width: 40%;
+        float: left;
+        height: 58px;
+        background: #2D74DA;
+        position: relative;
+        padding: 17px 0 5px 18px;
+    }
+    .page-name-click1.mobile-items {
+        float: left;margin: 0 36px 0 0px;
+    }
+  }
+
+
+  @media(max-width:400px){
+    #more-dropdown.show{
+        margin-bottom:68px !important;
+        
+        
+    }
+    .vc-menubar-nav-list li{
+        margin:0.8em !important;
+        width:13% !important;
+    }
+    .vc-client-form .form-fields{
+        padding:0 !important;
+        width:70vw !important
+    }
+    .page-name-container span{    margin-left: -35%;}
+}
+
+
+@media(max-width:320px){
+    .vc-menubar-nav-list li{
+        margin:0.9em !important;
+        width:12% !important;
+    }
+    .page-name-container span {
+        margin-left: -4%;
+    }
+    .vc-menubar-nav-list li .nav-label{
+        font-size:0.85em;
+        text-align: center;
+    }
+    #more-dropdown.show{
+        margin-bottom:60px !important;
+        
+        
+    }
+    .page-name-click1.mobile-items {
+        float: left;
+        margin: 0 12px 0 0px;
+    }
+}
+
+
+@media(min-width:768.1px){
+    #more-dropdown{
+        display: none;
+    }
+    .more-nav-item{
+        display: none;
+    }
+    .vc-menubar{
+        position: relative;
+        float: left;
+        width: $menubar-width;
+        height: 100%;
+        padding-top: $appbar-height;
+        .vc-menubar-inner{
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: $menubar-background-color;
+            @include box-shadow(5px 1px 10px -5px $light);
+    
+            .vc-menubar-nav-list{
+                position: relative;
+                float: left;
+                width: 100%;
+                list-style: none;
+                padding-left: 0px;
+                margin: 20px 0px 0px;
+    
+                >li.nav-item{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+    
+                    >a{
+                        padding: 20px 25px 20px 20px;
+                        color: $gray;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        border-left: solid 6px rgba(0,0,0,0);
+                        &.active{
+                            .nav-icon{
+                                color: $primary
+                            }
+                            border-left-color: $primary;
+                        }
+                        .nav-icon{
+                            color: $light;
+                            margin-right: 10px;
+                        }
+                        .nav-label{
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+}

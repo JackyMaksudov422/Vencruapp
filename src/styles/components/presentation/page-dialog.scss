@@ -1,0 +1,158 @@
+@import '../../mixins/page-dialog.scss';
+
+@media(max-width:768px){
+    .vc-page-dialog-content{
+        margin-top:0 !important;
+    }
+    .vc-page-dialog-body {
+        overflow-y: scroll !important;
+    }
+    .vc-page-dialog-content.modal-big{
+        height:100% !important;
+    }
+    .vc-page-dialog-content .vc-page-dialog-body {
+        height: 100% !important;
+    }
+  
+    .vc-plain-card.text-center button {
+        margin-top: 15px;
+    }
+    .spanned {
+        padding: 20px 3rem;
+    }
+ 
+    .spanned .col-sm-6.text-left button {
+        float: right;
+    }
+ 
+}
+
+.csv-import .modal-big {
+    margin-top: 100px;
+    width: 450px !important;
+}
+.csv-import .row.mb20.fields-row {
+    margin-bottom:25px !important;
+}
+.csv-import .form-fields {
+    margin: 0 0 20px 0 !important;
+    padding: 0 30px !important;
+}
+.csv-import h1 {
+    margin: 15px 0 !important;
+}
+
+.vc-page-dialog{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 100;
+
+    >.vc-page-dialog-inner{
+        position: relative; 
+        float: left;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >.vc-page-dialog-backdrop{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        >.vc-page-dialog-content{
+            position: relative;
+            float: none;
+            width: 100%;
+            max-width: 720px;
+            clear: both;
+            @media screen and (max-width: 414px) {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            >.vc-page-dialog-body{
+                position: relative;
+                float: left;
+                width: 100%;
+                padding: 84px 50px;
+                overflow: hidden;
+                @include border-radius(0.2rem);
+                @include page-dialog(#ffffff, $gray);
+                @include box-shadow(0px 5px 40px -10px rgba(0,0,0,0.3));
+
+                &.vc-page-dialog-primary{
+                    @include page-dialog($primary, lighten($primary, 38%));
+                }
+
+                &.vc-page-dialog-success{
+                    @include page-dialog($green, lighten($green, 52%));
+                }
+
+                &.vc-page-dialog-warning{
+                    @include page-dialog($orange, lighten($orange, 40%));   
+                }
+
+                &.vc-page-dialog-danger{
+                    @include page-dialog($red, lighten($red, 40%));
+                }
+                
+            }
+        }
+    }
+
+    &.create-client-page-dialog{
+        .vc-page-dialog-inner{
+            .vc-page-dialog-content{
+                max-width: 960px;
+                .vc-page-dialog-body {
+                    padding: 30px 0 ;
+                }
+     
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+
+    .csv-import .spanned {
+        padding: 0;
+    }
+    .csv-import .modal-big {
+        margin-top: 100px;height:202px !important;
+        width: 385px !important;
+       
+    }
+    .cancel-mobile {
+        float: left;
+        width: 50%;
+    }
+    .cancel-mobile {
+        float: left;
+        width: 24%;
+    }
+    .save-mobile {
+        float: left;
+        width: 50%;margin-top:6px;
+    }
+    .csv-import .form-fields-inner {
+        margin-left: 0 !important;
+    }
+}
+
+@media(max-width:360px){
+    
+    .vc-page-dialog-inner button{
+        margin: auto !important;
+    }
+}

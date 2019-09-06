@@ -1,0 +1,267 @@
+// #root > .app-body .app-authenticated-body{
+//     padding-bottom: 7.5em !important;
+// }
+// .t-member {
+//     float: left;
+//     margin: 0 0 0 54px;
+// }
+// .priviliges ul.spanned.mb0.list-unstyled li {
+//     float: left;
+//     width: 32%;
+//     margin: 0 7px 0 0px;
+//     text-align: right;
+// }
+// ul.spanned.mb0.list-unstyled:last-child li {
+//     width: 100%;
+//     text-align: left;
+//     float: none;
+// }
+// @media(max-width: 768px) {
+//     .app-authenticated-body.settings-page {
+//         padding: 0;
+//     }
+//     .member-list td.vc-table-cell.d-md-none {
+//         border-bottom:none !important;
+//     }
+//     .member-list span.item-description {
+//         margin-left: 55px;
+//     }
+//     .settings-page {
+//         margin-top: 14px !important;
+//     }
+//     .app-authenticated-body.settings-page {
+//         background: none !important;
+//     }
+//     .app-authenticated-body.items-container.items {
+//         padding-top: 0 !important;
+//     }
+
+    // .user-info-list li{
+    //     width: 100%;
+    //     text-align: center;
+    //     padding: 0 !important;
+    // }
+
+    // .vc-plain-card.settings-user-card > .user-info > .user-info-second > ul.user-info-list {
+    //     display: block;
+    //     flex: initial;
+    // }
+
+//     .p-setting {width:100%;margin-top:0;margin-right: 0;margin-left:0;}
+
+//     // .vc-input.input-default {
+//     //     border: none;
+//     //     box-shadow: none;
+//     //     padding-left: 0;
+//     //     padding-bottom: 12px;
+//     // }
+
+//     .p-setting .vc-input.input-default {
+//         padding-bottom: 0;margin-top:6px !important;
+//     }
+//     // .vc-input.input-default input{
+//     //     padding-left: 0;
+//     // }
+
+//     .react-phone-number-input__country {
+//         padding: 0 !important;
+//     }
+
+//     span.prepended-content {
+//         padding: 0 !important;
+//     }
+
+//     label.input-label {
+//         position: absolute;
+//         bottom: 0;
+//         z-index: 2;
+//         width: 100%;
+//         border-bottom: 1px solid #ccc;
+//         padding-bottom: 11px;
+//     }
+
+//     .col-md-6 {
+//         padding-bottom: 8px;
+//         padding-top: 10px;
+//     }
+
+//     .vc-select.vc-select-default {
+//         padding-left: 0;
+//     }
+//     // .mobile-items {
+//     //     display: none;
+//     // }
+
+//     .vc-appbar .page-name-container{
+//         width: 160px;
+//     }
+//     button.select-toggle-button {
+//         background: none !important;
+//         border: none !important;
+//         padding-left: 0 !important;
+//         padding-bottom: 0 !important;
+//         padding-left: 0 !important;
+//         height: 23px !important;
+//     }
+
+//     .settings-nav-tab .settings-nav-tab-content{
+//         padding: 0 ;
+//     }
+//     .payment-settings-page .settings-nav-tab-content {
+// 		padding: 0 20px;
+// 	}
+//     .p-setting input {
+//         background: none;
+//     }
+//     .settings-page .vc-dashboard-section-body {
+//         margin-top: 15px;
+//     }
+//     .settings-page .vc-dashboard-section-body {
+//         margin-top: 15px;
+//       }
+//       .settings-page .vc-input.input-default.mb5.mt10 {
+//         margin-bottom: 0 !important;
+//     }
+//     .settings-page .vc-select.vc-select-default.mb5.mt10 {
+//       padding-left: 15px;
+//     }
+//     .settings-page label.input-label {
+//       padding-left: 15px !important;
+//     }
+//     .settings-page .col-md-6.mb20 {
+//         margin-top: 0 !important;
+//         padding-top: 0 !important;
+//     }
+//     .settings-page .vc-input.input-default {
+//         padding-left: 15px;
+//     }
+//     .settings-page .vc-input.input-default.mb5.mt10 {
+//         margin: 0 !important;
+//         height: 50px;
+//     }
+//     .online-payment-column label {
+//         color: #fff;
+//     }
+//     .payment-settings-page label.input-label.spanned.mb10 {
+//         border: none;
+//     }
+//     .settings-page .vc-select.vc-select-default.mb5.mt10 {
+//         padding-left: 30px;
+//     }
+//     .business-form label.input-label {
+//         padding-left: 30px !important;
+      
+//     }
+//     .business-form input[type="text"] {
+//         padding-left: 15px !important;
+//     }   
+//     .business-form span.prepended-content {
+//         padding-left: 15px !important;
+//     }
+//     .business-form .react-phone-number-input__country.react-phone-number-input__country--native {
+//         padding-left: 15px !important;
+//     }
+//     label.input-label.social-links {
+//         padding-left: 15px !important;
+//     }
+
+//     .business-settings .mobile-navlist {
+//         display: none !important;
+//     }
+//     .online-payment-column button {
+//         padding-left: 100px !important;
+//     }
+//     .member-list .settings-nav-tab-content {
+//         padding: 0 !important;
+//     }
+//     .member-list {
+//         padding: 0 !important;
+//     }
+//     .member-list .team-member-action-buttons.text-right {
+//         float: right;
+//         width: 35%;
+//     }
+//     .add-button.desktop-btn {
+//         display: none;
+//     }
+//     .member-list button.vc-button.vc-button-primary.vc-button-small {
+//         background: none;
+//         color: #2D74DA;
+//         font-size: 14px;
+//         padding: 0;
+//         margin: 0;
+//     }
+//     .add-button.member {
+//         padding-left: 0;
+//         font-size: 18px;
+//         margin-bottom: 10px;
+//     }
+//     .member-list table.vc-table > tbody.vc-table-body > tr.vc-table-row > td.vc-table-cell {
+//         padding-left: 15px !important;
+//         padding-right: 0 !important;padding-top:0 !important;padding-bottom:0 !important;
+//     }
+//     .member-list-header {
+//         float: left;
+//     }
+//     .edit-team-member label.input-label {padding-left: 0 !important; position: inherit;border-bottom:0;}
+//     .edit-team-member .mb20 .vc-input {
+//         margin-bottom: 0 !important;
+//     }
+//     .edit-team-member .vc-input.input-default.input-small.undefined {
+//         padding-left: 0;
+//     }
+//     .edit-team-member input[type="text"] {
+//         padding: 0 7px !important;
+//     }
+//     .edit-team-member input {
+//         border: 1px solid;
+//         border: 0.997541px solid rgba(140, 160, 179, 0.2);
+//         height: 44px !important;
+//         border-radius: 4px !important;
+//     }
+//     .edit-team-member .col-md-12.mb20 {
+//         padding-left: 0;
+//     }
+//     .edit-team-member .spanned.flex-row.justify-space-between-list.pt23 {padding-left: 0;}
+//     .edit-team-member span.vc-checkbox.square {padding-left: 0;}
+//     .edit-team-member span.checkbox-label {
+//         float: left;
+//         padding: 0 12px 0 26px;
+//         margin-top: -11px;
+//     }
+//     .edit-team-member .spanned {
+//         padding-left: 0;
+//     }
+//     .role-description1 label {
+//         padding-bottom: 0;
+//         margin-bottom: 0 !important;
+//     }
+//     .priviliges label {
+//         padding-bottom: 0;
+//         margin-bottom: 0 !important;
+//     }
+    
+//     .priviliges ul {
+//         margin-top: 0 !important;
+//     }
+//     .priviliges .vc-checkbox .checkbox-mark-container {
+//         display: table-cell;
+//     }
+//     .priviliges ul.spanned.mb0.list-unstyled li {
+//         margin-bottom: 15px;
+//         width: 100%;
+//         text-align: left;
+//     }
+//     .priviliges ul {
+//         padding-bottom: 0;
+//         padding-top: 0;
+//     }
+//     .priviliges button.vc-button.vc-button-primary{    margin-top: 0;}
+//     .member-list button.vc-button.vc-button-primary {
+//         margin-top: 0 !important;
+//     }
+//     .role-description2 .spanned.flex-row.justify-space-between-list.pt23 {
+     
+//         padding-top: 12px !important;
+//     }
+// }

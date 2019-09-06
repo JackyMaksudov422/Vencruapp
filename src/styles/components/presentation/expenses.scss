@@ -1,0 +1,206 @@
+.vc-expenses-home{
+    .new-expense-card{
+        height: 222.17px;
+        .add-icon{
+            color: $green;
+            font-size: 1.3rem;
+            margin-top: -8px;
+        }
+        .add-label{
+            margin-left: 5px;
+            color: $gray;
+            font-size: 1rem;
+            line-height: 1rem;
+            display: inline-block;
+            margin-top: -5px;
+        }
+    }
+
+    .expense-total-outstanding{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-top;
+
+        .amount{
+            flex: 1;
+            padding-top: 16px;
+        }
+    }
+}
+
+.vc-expenses-deleted-list{
+    .expense-total-outstanding{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-top;
+
+        .amount{
+            flex: 1;
+            padding-top: 16px;
+        }
+    }
+}
+
+.vc-expense-form{
+    position: relative;
+    float: left;
+    width: 100%;
+
+    >.vc-expense-form-header{
+        position: relative;
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+
+        >.title{
+            position: relative;
+            float: left;
+            display: block;
+            color: $primary;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: Black;
+        }
+        >.exp-number{
+            position: relative;
+            float: right;
+            display: block;
+            color: $primary;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: Black;
+        }
+    }
+
+    >.vc-expense-form-body {
+        position: relative;
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+
+        .form-fields{
+            position: relative;
+            float: left;
+            width: 100%;
+            background-color: $white;
+
+            >.form-fields-inner{
+                position: relative;
+                width: 100%;
+                float: left;
+                z-index: 1;
+
+                label.input-label{
+                    display: block;
+                    color: #8CA0B3;
+                    font-size: 12px;
+                    line-height: 14px;
+                    text-align: left;
+                    margin-bottom: 5px;
+                }
+
+                .vc-input, .vc-select .select-toggle-button{
+                    color: #31393C;
+                    border-color: rgba(140, 160, 179, 0.2);
+
+                    &.focus{
+                        border-color: rgba(140, 160, 179, 0.2) !important;
+                        input{
+                            background-color: rgba(140, 160, 179, 0.2);
+                        }
+                    }
+                }
+
+                .receipt-selector{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                }
+
+                    button.submit-button{
+                        padding-left: 30px;
+                        padding-right: 30px;
+
+                    }
+
+                    button.cancel-button{
+
+                    }
+            }
+        }
+
+    }
+
+    >.vc-expense-form-footer{
+        position: relative;
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: center;
+        align-items: center;
+        justify-content: center;
+        >.powered-by{
+            color: #000000;
+            font-size: 14px;
+            line-height: 20px;
+            margin-right: 7.5px;
+        }
+        >img.brand{
+            width: 72px;
+        }
+    }
+}
+
+.vc-page-dialog.expense-form-page-dialog{
+    .vc-page-dialog-inner{
+        .vc-page-dialog-content{
+            max-width: 822px;
+            .vc-page-dialog-body {
+                padding: 45px 55px 24px 55px !important;
+                .expense-fetch-error{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                    background-color: #ffffff;
+
+                    .error-title{
+                        color: $primary;
+                        font-weight: normal;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    }
+
+                    .error-description{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        margin-top: 0px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    .actions-container{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media(max-width : 768px){
+
+    .vc-expenses-home .new-expense-card{height:0;}
+}

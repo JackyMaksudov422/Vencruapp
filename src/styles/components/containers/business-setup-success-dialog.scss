@@ -1,0 +1,56 @@
+.navbar{
+    display: none;
+}
+.business-setup-success-dialog{
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+
+    .dialog-image{
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .heading{
+        .heading-title{
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        .heading-icon{
+            width: 28px;
+            &:first-child{
+                margin-right: 10px;
+            }
+            &:last-child{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .sub-heading{
+        font-size: 1.3rem;
+    }
+
+    .message{
+        span{
+            color: $primary;
+        }
+    }
+
+    .setup-button{
+        font-size: 0.75rem;
+    }
+}
+
+
+@media(max-width:768px){
+    .setup-success-nav{
+        display: block !important;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        margin-top:0 !important;
+    }
+}

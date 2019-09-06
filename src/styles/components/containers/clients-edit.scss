@@ -1,0 +1,70 @@
+.vc-page-dialog.edit-client-page-dialog{
+    .vc-page-dialog-inner{
+        .vc-page-dialog-content{
+            max-width: 960px;
+            .vc-page-dialog-body {
+                padding: 30px 6rem ;
+                .client-fetch-error{
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                    background-color: #ffffff;
+
+                    .error-title{
+                        color: $primary;
+                        font-weight: normal;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    }
+
+                    .error-description{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        margin-top: 0px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    .actions-container{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:768px){
+.vc-page-dialog.edit-client-page-dialog .vc-page-dialog-inner .vc-page-dialog-content .vc-page-dialog-body{padding:10px 0 !important;}
+.vc-input.input-default.input-small.undefined {
+    margin-bottom: 17px;
+}
+.vc-client-form .form-fields > .form-fields-inner{width:90%;float:none;margin:0 auto;}
+.mb20{margin-bottom:0 !important;}
+.vc-client-form .form-fields{width:auto !important;}
+.spanned .col-sm-6 {
+    float: right;
+    width: 50%;
+}
+button.vc-button.vc-button-primary.submit-button {
+    /* width: 60%; */
+    padding: 12px 22px;
+}
+
+.spanned button.vc-button.vc-button-link-primary.cancel-button {
+
+    float: left;
+}
+.vc-client-form .form-fields{margin-bottom:0;padding-bottom:0;}
+
+button.select-toggle-button {
+    margin-bottom: 15px;
+}
+
+
+}

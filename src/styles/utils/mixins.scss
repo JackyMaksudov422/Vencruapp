@@ -1,0 +1,172 @@
+// mixin for active side menu links
+@mixin activeMenuLink()
+{
+    background-color: darken(theme-color('secondary'), 3%);
+    
+    .icon
+    {
+        color: rgba(theme-color('primary'), 1);
+    }
+}
+
+// mixin for active side menu items
+@mixin activeMenuItem()
+{
+    background-color: darken(theme-color('secondary'), 3%);
+
+    >a{
+        @include activeMenuLink();
+    }
+}
+
+// style when incertain styles
+@mixin respond-to($media) {
+    @if $media == handheld {
+      @media only screen and (max-width: 479px) { @content; }
+    }
+    @else if $media == wide-handheld {
+      @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+    }
+    @else if $media == tablet {
+      @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+    }
+    @else if $media == tablet-up {
+      @media only screen and (min-width: 768px) { @content; }
+    }
+}
+
+@mixin box-shadow($box-shadow...)
+{
+  box-shadow: $box-shadow;
+  -o-box-shadow: $box-shadow;
+  -ms-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+}
+
+@mixin text-shadow($text-shadow...)
+{
+  text-shadow: $text-shadow;
+  -o-text-shadow: $text-shadow;
+  -ms-text-shadow: $text-shadow;
+  -moz-text-shadow: $text-shadow;
+  -webkit-text-shadow: $text-shadow;
+}
+
+@mixin border-radius($border-radius...)
+{
+  border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+}
+
+@mixin border-top-left-radius($radius...)
+{
+  border-top-left-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+}
+
+@mixin border-top-right-radius($radius...)
+{
+  border-top-right-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-left-radius($radius...)
+{
+  border-bottom-left-radius: $radius;
+  -o-border-bottom-left-radius: $radius;
+  -ms-border-bottom-left-radius: $radius;
+  -moz-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+}
+
+@mixin border-bottom-right-radius($radius...)
+{
+  border-bottom-right-radius: $radius;
+  -o-border-bottom-right-radius: $radius;
+  -ms-border-bottom-right-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius...)
+{
+  border-bottom-right-radius: $radius;
+  -o-border-bottom-right-radius: $radius;
+  -ms-border-bottom-right-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -o-border-bottom-left-radius: $radius;
+  -ms-border-bottom-left-radius: $radius;
+  -moz-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+}
+
+@mixin border-top-radius($radius...)
+{
+  border-top-right-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+}
+
+@mixin transition($transition...)
+{
+  transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+}
+
+@mixin transition-delay($transition-delay...)
+{
+  transition-delay: $transition-delay;
+  -o-transition-delay: $transition-delay;
+  -ms-transition-delay: $transition-delay;
+  -moz-transition-delay: $transition-delay;
+  -webkit-transition-delay: $transition-delay;
+}
+
+@mixin transform($transform...)
+{
+  transform: $transform;
+  -o-transform: $transform;
+  -ms-transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+}
+
+@mixin animation($animation...)
+{
+  animation: $animation;
+  -o-animation: $animation;
+  -ms-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+}
+
+@mixin filters($filters...)
+{
+  filter: $filters;
+  -o-filter: $filters;
+  -ms-filter: $filters;
+  -moz-filter: $filters;
+  -webkit-filter: $filters;
+}

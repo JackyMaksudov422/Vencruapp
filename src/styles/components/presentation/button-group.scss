@@ -1,0 +1,103 @@
+@import '../../mixins/button-group';
+
+.vc-button-group{
+    @include border-radius(0.3rem);
+    // @include box-shadow(0 0 14px rgba(0,0,0,0.4));
+    @include button-group(
+        $light,
+        #ffffff,
+        darken(#ffffff, 5%),
+        $black,
+        lighten($black, 5%)
+    );
+
+    >.vc-button-group-item{
+        display: inline-block;
+        &:last-child{
+            >.vc-button, >.vc-dd >.dd-toggle-button{
+                @include border-top-right-radius(0.3rem);
+                @include border-bottom-right-radius(0.3rem);
+
+            }
+        }
+        &:first-child{
+            >.vc-button, >.vc-dd >.dd-toggle-button{
+                @include border-top-left-radius(0.3rem);
+                @include border-bottom-left-radius(0.3rem);
+            }
+        }
+        >.vc-button, >.vc-dd >.dd-toggle-button {
+            padding: 0rem 1.4rem !important;
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+            font-weight: normal;
+            @include border-radius(0px);
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.vc-button-primary{
+        @include button-group(
+            darken($primary, 5%),
+            $primary,
+            darken($primary, 5%),
+            #ffffff,
+            #ffffff
+        );
+    }
+
+    &.vc-button-secondary{
+        @include button-group(
+            lighten($secondary, 5%),
+            $secondary,
+            lighten($secondary, 5%),
+            #ffffff,
+            #ffffff
+        );
+    }
+
+    &.vc-button-success{
+        @include button-group(
+            darken($green, 5%),
+            $green,
+            darken($green, 5%),
+            #ffffff,
+            #ffffff
+        );
+    }
+
+    &.vc-button-warning{
+        @include button-group(
+            darken($orange, 5%),
+            $orange,
+            darken($orange, 5%),
+            #ffffff,
+            #ffffff
+        );
+    }
+
+    &.vc-button-danger{
+        @include button-group(
+            darken($red, 5%),
+            $red,
+            darken($red, 5%),
+            #ffffff,
+            #ffffff
+        );
+    }
+
+    &.vc-button-gray{
+        @include button-group(
+            darken($gray, 5%),
+            $gray,
+            darken($gray, 5%),
+            #ffffff,
+            #ffffff
+        );
+    }
+}
+
